@@ -1,0 +1,403 @@
+<html><head><meta http-equiv=Content-Type content="text/html; charset=iso-8859-2"><link rel=stylesheet href=magazin.css TYPE=text/css><title>MagaZin
+#12 :: sierpień 2002</title></head><body link=#478DE7 vlink=#478DE7 alink=#478DE7 topmargin=0 bottommargin=0 bgcolor=#000000><div align=center><center><table border=0 width=650 style="border-style: solid; border-width: 0" cellspacing=0 cellpadding=0 height=100% bgcolor=#FFFFFF><tr><td width=100% height=20 valign=top></td></tr></center><tr><td width=100% height=25 valign=middle bgcolor=#4048A8><div align=center><table border=0 width=583 cellspacing=0 cellpadding=0><center><td width=400 class=9ptV valign=bottom colspan=3><p class=9ptV><font color=#FFFFFF><b>MAGAZIN
+            #12 :: STRONA 20</b></font></td></center><td width=133 class=9ptV valign=bottom><p align=right><font color=#FFFFFF><img border=0 src=../img/direct.gif width=7 height=10><img border=0 src=../img/direct3.gif width=7 height=10><img border=0 src=../img/direct2.gif width=7 height=10></font></td><center><td width=8 class=9ptV valign=bottom></td><td width=55 class=9ptV><b><font color=#FFFFFF>KOMPUTER</font></b></td></table></center></div></td></tr><center><tr><td width=100% height=5 valign=top><p class=9ptV>&nbsp;</td></tr><tr><td width=100% height=20 valign=bottom></center><div align=center><table border=0 width=586 height=20 cellspacing=0 cellpadding=0><tr><td width=135 background=../img/line3.gif><p align=right><img border=0 src=../img/line.gif width=9 height=20></td><center><td width=310 valign=bottom><p align=center class=9ptV><a href="19.htm" class="link2"><font color=#4048A8>poprzednia strona</a> ::
+              </font><a href=spis.htm class=link2><font color=#4048A8>spis treści</font></a><font color=#4048A8> ::<a href="21.htm" class="link2">
+              </a> </font><a href="21.htm" class="link2"><font color=#4048A8>następna strona</font></a></td><td width=135 background=../img/line3.gif><img border=0 src=../img/line2.gif width=9 height=20></td></tr></table></center></div></td></tr><center><tr><td width=100% height=5 valign=top><p class=9ptV>&nbsp;</td></tr><tr><td width=100% height=21 valign=top><div align=center><center><table border=0 width=600 cellspacing=0 cellpadding=6 height=20 bgcolor=#FFFFFF><tr><td width=285 height=20 valign=top class=9pt><div align=center><center><table border=0 width=100% cellspacing=0 cellpadding=0><tr><td width=100% valign=top class=9ptV height=15><i>Software</i></td></tr><tr><td width=100%><p class=u>Kurs C++ #4</td></tr></table></center></div><p class=9ptV align=justify><b>Sterowanie
+              przebiegiem programu</b><br> <br> 
+              Witajcie po raz piąty. Chciałem już pisać o
+              wskaźnikach w C++, ale doszedłem do wniosku, że zostawimy je
+              sobie na później. Wskaźniki nie są specjalnie trudne, ale jeśli
+              korzysta się z nich po raz pierwszy &#8211; mogą sprawiać problemy.
+             <p class=9ptV align=justify> W tym odcinku zajmiemy się jeszcze elementarzem
+              programowania - instrukcjami sterującymi. Sterowanie przebiegiem
+              programu &#8211; jak to dumnie brzmi :). A sprawa jest banalnie prosta
+              &#8211; chodzi o to, żeby nasz program mógł podejmować pewne
+              decyzje odnośnie kolejnej instrukcji, którą ma wykonać.
+              Wiadomo, że najprostszy przebieg programu to przebieg z góry na
+              dół, po kolei wykonuje się każda instrukcja. Ale często taki
+              przebieg programu nie wystarcza i potrzebne są bardziej
+              &#8222;wyrafinowane&#8221; metody. Istnieje potrzeba, żeby w zależności
+              od jakiegoś warunku wykonana została pewna instrukcja (być może
+              nawet kilka razy), ale jeśli ten warunek nie zachodzi, to ta
+              instrukcja nie ma być wykonana (zamiast tego być może należy
+              wtedy wykonać inną instrukcję).
+              </p>
+            <p class=9ptV align=justify> Instrukcje sterujące wykorzystywaliśmy właściwie
+              już w prawie każdym przykładowym programie (w postaci pętli
+              for). Dzisiaj nastąpi rozszerzenie i usystematyzowanie wiadomości
+              :)&nbsp;<o:p>
+              </o:p>
+              </p>
+              <h1 class="9ptV"><b>Instrukcja if</b></h1>
+             <p class=9ptV align=justify> Instrukcja ta może występować w różnych
+              wariantach:<o:p>
+              </o:p>
+              </p>
+          <p class=9ptV align=justify> <font color="#4048A8">if (wyrażenie) instrukcja1;<o:p>
+              </font>
+              </o:p>
+              </p>
+              <p class="9ptV">Jeśli spełnione jest wyrażenie to wykona się
+              instrukcja1.</o:p>
+              </p>
+              <p class="9ptV"><font color="#4048A8">if (wyrażenie) instrukcja1;<o:p>
+              </font>
+              </o:p>
+              </p>
+              <p class="9ptV"><font color="#4048A8">else instrukcja2;</font></p>
+              <p class="9ptV">Jeśli spełnione jest wyrażenie to wykona się
+              instrukcja1, w przeciwnym wypadku wykona się instrukcja2.<font color="#4048A8"></o:p>
+              </font>
+              </p>
+          <p class=9ptV align=justify> <font color="#4048A8">if (wyrażenie1) instrukcja1;<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              else if (wyrażenie2) instrukcja2;<o:p></o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              else if (wyrazenie3) instrukcja3;<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              else if (wyrażenie4) instrukcja4;<o:p></o:p>&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              /* może być więcej else if :)<o:p>
+              na końcu może pojawić się samo else */<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <font color="#4048A8">else instrukcja5;</font>
+              </p>
+        <p class=9ptV align=justify> Jeżeli spełnione jest wyrażenie1 to wykona się
+              instrukcja1. W przeciwnym wypadku (czyli gdy wyrażenie1 nie jest
+              spełnione), będzie badane wyrażenie2 (jeśli jest spełnione
+              &#8211; wykona się instrukcja2, i sterowanie przejdzie dalej, do
+              instrukcji spoza if i odnoszących się do niego else); ale jeśli
+              wyrażenie2 nie jest spełnione będzie badane wyrażenie3 (jeśli
+              jest spełnione &#8211; wykona się instrukcja3, i sterowanie
+              przejdzie dalej), itd. Jeżeli żadne z wyrażeń wyrażenie2..wyrażenie_n
+              (u nas wyrażenie4) nie jest spełnione, wykona się instrukcja5.
+              </p>
+         <p class=9ptV align=justify> Instrukcja, która ma się wykonać w przypadku
+              spełnienia/niespełnienia wyrażenia może być:</p>
+              <p class="9ptV" style="margin-left:36.0pt;text-indent:-18.0pt;mso-list:l3 level1 lfo4;
+tab-stops:list 36.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>pojedynczą instrukcją&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              -<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>blokiem instrukcji zawartym w nawiasach { }, np.</p>
+              <p class="MsoNormal" style="margin-left:35.4pt"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">{<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+              </span><br>instrukcja1;<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>instrukcja2;<o:p>&nbsp;<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp; </span>instrukcja3;<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              }</font></span></p>
+              <p class="9ptV" style="margin-left:35.4pt">
+              </o:p>
+              </p>
+       <p class=9ptV align=justify> Wyrażenie jest prawdziwe, jeśli ma wartość różną
+              od 0</p>
+             <p class=9ptV align=justify> Przykłady wyrażeń:</p>
+              <p class="9ptV" style="margin-left:53.4pt;text-indent:-18.0pt;mso-list:l1 level1 lfo3;
+tab-stops:list 53.4pt">-<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span><font color="#4048A8">a==10</font><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>- zwraca wartość różną od 0 (&#8222;prawda&#8221;) jeśli a
+              jest równe 10; w przeciwnym wypadku zwraca 0 (&#8222;fałsz&#8221;)</p>
+              <p class="9ptV" style="margin-left:53.4pt;text-indent:-18.0pt;mso-list:l1 level1 lfo3;
+tab-stops:list 53.4pt">-<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span><font color="#4048A8">a&lt;5</font><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>- zwraca wartość różną od 0 (&#8222;prawda&#8221;) jeśli a
+              jest mniejsze od 5, w przeciwnym wypadku zwraca 0 (&#8222;fałsz&#8221;)</p>
+              <p class="9ptV" style="margin-left:53.4pt;text-indent:-18.0pt;mso-list:l1 level1 lfo3;
+tab-stops:list 53.4pt">-<span style="font-style: normal; font-variant: normal; font-weight: normal; font-size: 7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#4048A8">&nbsp;&nbsp;
+              </font></span><font color="#4048A8">a&nbsp;</font><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>- zwraca wartość a. Jeśli a jest różne od zera, to
+              warunek jest spełniony (&#8222;prawda&#8221;), jeśli a jest równe 0, to
+              warunek nie jest spełniony (&#8222;fałsze&#8221;)</p>
+              <p class="9ptV">Przykład zastosowania instrukcji if:</p>
+              <p class="9ptV"><span lang="EN-US" style="mso-ansi-language: EN-US"><font color="#4048A8">#include
+              &lt;iostream.h&gt;<o:p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+              </span></p>
+              <p class="9ptV"><span lang="EN-US" style="mso-ansi-language: EN-US"><font color="#4048A8">#include
+              &lt;iostream.h&gt;<o:p>
+              </o:p>
+              </font>
+              </span></p>
+              <p class="9ptV"><span lang="EN-US" style="mso-ansi-language: EN-US"><font color="#4048A8">&nbsp;<o:p>
+              main()<o:p>
+              </o:p>
+              </font>
+              </span></p>
+              <p class="9ptV"><font color="#4048A8"><span lang="EN-US" style="mso-ansi-language: EN-US">{<o:p>&nbsp;</span><span lang="EN-US" style="mso-ansi-language: EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>int liczba;</span><span style="mso-ansi-language: EN-US" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font></p>
+              <p class="9ptV"><font color="#4048A8"><span style="mso-tab-count: 1; mso-ansi-language: EN-US" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>cout &lt;&lt; &quot;Podaj liczbe: &quot;;<o:p>
+              </o:p>
+              </font></p>
+              <p class="9ptV"><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;
+              </font>
+              </span><font color="#4048A8">cin &gt;&gt; liczba;<o:p>
+              </o:p>
+              </font>
+              </p>
+              <p class="9ptV"><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;
+              </font>
+              </span><font color="#4048A8">cout &lt;&lt; &quot;Podana przez Ciebie liczba to: &quot;;<o:p>
+              </o:p>
+              </font>
+              </p>
+              <p class="9ptV"><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;
+              </font>
+              </span><font color="#4048A8">if (liczba &gt; 0) cout &lt;&lt; &quot;liczba
+              dodatnia&quot; &lt;&lt; endl;<o:p>
+              </o:p>
+              </font>
+              </p>
+              <p class="9ptV"><span style="mso-tab-count: 1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;
+              </font>
+              </span><font color="#4048A8"><span lang="EN-US" style="mso-ansi-language: EN-US">else
+              if(liczba == 0) cout &lt;&lt; &quot;zero&quot; &lt;&lt; endl;<o:p>
+              </o:p>
+              </span></font></p>
+              <p class="9ptV"><span lang="EN-US" style="mso-ansi-language: EN-US"><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;
+              </font>
+              </span><font color="#4048A8">else cout &lt;&lt; &quot;liczba ujemna&quot; &lt;&lt; endl;<o:p>
+              </o:p>
+              </font>
+              </span></p>
+              <p class="9ptV"><span style="mso-tab-count: 1; mso-ansi-language: EN-US" lang="EN-US"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;
+              </font>
+              </span><font color="#4048A8">return 0;<o:p>
+              </o:p>
+              </font>
+              </p>
+              <p class="9ptV"><font color="#4048A8">}</font></p>
+          <p class=9ptV align=justify> >Wyrażenia można łączyć ze sobą za pomocą
+              operatorów logicznych LUB, I oraz stosować negację.</p>
+              <p class="9ptV"><font color="#4048A8">||</font> - logiczne LUB</p>
+              <p class="9ptV"><font color="#4048A8">&amp;&amp;</font> - logiczne I</p>
+              <p class="9ptV"><font color="#4048A8">! </font> &#8211; logiczna negacja</p>
+              <p class="9ptV">przykłady złożonych wyrażeń:</p>
+            <p class=9ptV align=justify> <font color="#4048A8">a&gt;0 &amp;&amp; a&lt;10 </font> &#8211; będzie spełnione,
+              gdy a będzie większe od 0 I a będzie mniejsze od 10 (innymi słowy
+              a będzie z przedziału (0, 10)).</p>
+       <p class=9ptV align=justify> <span style="mso-ansi-language:PL"><font color="#4048A8">a&gt;0
+              || b&gt;0 </font> &#8211; będzie spełnione, gdy a będzie dodatnie LUB b będzie
+              dodatnie (lub oba)<span style="mso-ansi-language: PL">&nbsp;</span></span>&nbsp;
+            <p class=9ptV align=justify> <span style="mso-ansi-language:PL"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">!(a&lt;0)</font></span>
+              &#8211; będzie spełnione, gdy a NIE będzie mniejsze od 0 (czyli będzie
+              większe lub równe 0)</span></td><td width=285 height=20 valign=top class=9pt></center></center>
+          <p class="9ptV"><b>&nbsp;Instrukcja switch</b><o:p>
+          </o:p>
+          </p>
+         <p class=9ptV align=justify> Jest to instrukcja działająca jak przełącznik.
+          Zależnie od wartości zmiennej sterowanie może przeskoczyć (zostać
+          przełączone) do odpowiedniego miejsca w programie.</p>
+          <p class="9ptV">&nbsp;<span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">switch(zmienna)<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">{<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>case wartość1:<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>instrukcja1_1;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>instrukcja1_2;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">
+          </font></span><font color="#000000">/* I tak dalej */</font><font color="#4048A8"><o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>break;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>case wartość2:<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>instrukcja2_1;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>instrukcja2_2;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">&nbsp;&nbsp;
+          </font></span><font color="#000000">/* I tak dalej */</font><font color="#4048A8"><o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>break;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>default:<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>instrukcja_1;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>instrukcja_2;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><span style="mso-tab-count:1"><font color="#4048A8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">
+          </font></span><font color="#000000">/* I tak dalej */</font><font color="#4048A8"><o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV" style="margin-left:70.8pt"><span style="font-family:&quot;Courier New&quot;"><font color="#000000">/*
+          break już nie jest konieczne, ale nie zaszkodzi :) */</font><font color="#4048A8"><o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>break;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><font color="#4048A8"><span style="font-family:&quot;Courier New&quot;">}</span>&nbsp;</font><o:p>
+          </o:p>
+          </p>
+          <p class=9ptV align=justify> Jeśli <span style="font-family:&quot;Courier New&quot;">zmienna</span>
+          będzie miała wartość równą <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">wartość1</font></span>
+          - wykonają się instrukcje po <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">case
+          wartość1:</font></span>, czyli <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">instrukcja1_1</font></span>
+          i <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">instrukcja1_2</font></span>.
+          <font color="#4048A8"><span style="font-family:&quot;Courier New&quot;">Break</span>
+          </font>powoduje przerwanie wykonywania kolejnych instrukcji (czyli <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">instrukcji2_1</font></span>
+          itd.) i przeniesienie sterowania za blok <font color="#4048A8"><span style="font-family:&quot;Courier New&quot;">switch</span>
+          </font>(czyli następną instrukcją do wykonania będzie pierwsza
+          instrukcja leżąca poza blokiem <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">switch</font></span>).
+          <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">Break</font></span>
+          nie jest konieczne, wtedy po prostu nie zostanie przeniesione
+          sterowanie w inne miejsce i wykonają się instrukcje zawarte po następnym
+          <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">case</font></span>.</p>
+          <p class="9ptV">Analogicznie jest w sytuacji, jeżeli <span style="font-family:
+&quot;Courier New&quot;">zmienna </span>będzie miała wartość równą <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">wartość2</font>
+          </span>- wykonają się instrukcje po<font color="#4048A8"> <span style="font-family:&quot;Courier New&quot;">case
+          wartość2:</span></font>.</p>
+         <p class=9ptV align=justify> Jeżeli<font color="#4048A8"> <span style="font-family:&quot;Courier New&quot;">zmienna
+          </span></font>posiada wartość, która nie występuje przy żadnym ze
+          słów <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">case</font></span>,
+          czyli nie zostanie dopasowana do żadnej z podanych wartości -
+          sterowanie przechodzi do instrukcji występujących po <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">default:</font></span>.&nbsp;<o:p>
+          </o:p>
+          </p>
+          <p class="9ptV">Czas na przykład:</p>
+          <p class="9ptV">&nbsp;<span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8">#include &lt;iostream.h&gt;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><font color="#4048A8"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US">&nbsp;</span><span style="font-family:&quot;Courier New&quot;">main()<o:p>
+          </o:p>
+          </span></font></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">{<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>char z;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>cout &lt;&lt; &quot;Czy lubisz instrukcje switch? (t-tak, n-nie,
+          ?-nie wiem): &quot;;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>cin &gt;&gt; z;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>switch(z)<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><font color="#4048A8"><span style="mso-tab-count: 1; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span lang="EN-US" style="font-family:
+&quot;Courier New&quot;;mso-ansi-language:EN-US">{<o:p>
+          </o:p>
+          </span></font></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>case 't':<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>cout &lt;&lt; &quot;Lubisz switcha!&quot; &lt;&lt; endl;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>break; <o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>case 'n':<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><font color="#4048A8"><span style="mso-tab-count: 1; font-family: Courier New; mso-ansi-language: EN-US" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-family:&quot;Courier New&quot;">cout&lt;&lt;&quot;Jak
+          możesz nie lubić switcha?!&quot; </span><span lang="EN-US" style="font-family:
+&quot;Courier New&quot;;mso-ansi-language:EN-US">&lt;&lt; endl;<o:p>
+          </o:p>
+          </span></font></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>break;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>case '?':<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><font color="#4048A8"><span style="mso-tab-count: 1; font-family: Courier New; mso-ansi-language: EN-US" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-family:&quot;Courier New&quot;">cout&lt;&lt;&quot;Nastepnym
+          razem badz bardziej zdecydowany!&quot; </span><span lang="EN-US" style="font-family:&quot;Courier New&quot;;mso-ansi-language:EN-US">&lt;&lt;
+          endl;<o:p>
+          </o:p>
+          </span></font></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>break;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span lang="EN-US" style="font-family:&quot;Courier New&quot;;
+mso-ansi-language:EN-US"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>default:<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><font color="#4048A8"><span style="mso-tab-count: 1; font-family: Courier New; mso-ansi-language: EN-US" lang="EN-US">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span><span style="font-family:&quot;Courier New&quot;">cout&lt;&lt;&quot;Nie
+          rozumiem tej decyzji!!!&quot; &lt;&lt; endl;<o:p>
+          </o:p>
+          </span></font></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;
+          </span>}<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><span style="font-family:&quot;Courier New&quot;"><font color="#4048A8"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>return 0;<o:p>
+          </o:p>
+          </font></span></p>
+          <p class="9ptV"><font color="#4048A8"><span style="font-family:&quot;Courier New&quot;">}</span>&nbsp;</font><o:p>
+          </o:p>
+          </p>
+        <p class=9ptV align=justify> <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">char
+          z</font></span> oznacza, że <span style="font-family:&quot;Courier New&quot;">z</span>
+          jest zmienną typu znakowego. Wyrażenie <font color="#4048A8"><span style="font-family:&quot;Courier New&quot;">switch</span>
+          </font>w zasadzie stosuje się tylko do zmiennych typu<font color="#4048A8">
+          <span style="font-family:&quot;Courier New&quot;">int</span></font>
+          lub <span style="font-family:&quot;Courier New&quot;"><font color="#4048A8">char</font></span>.&nbsp;<o:p>
+          </o:p>
+          </p>
+        <p class=9ptV align=justify> Jeśli już znudzi Ci się ten program, ze względu na
+          swoją prostotę &#8211; pousuwaj instrukcje<font color="#4048A8"> <span style="font-family:&quot;Courier New&quot;">break</span></font>
+          &#8211; zobaczysz coś ciekawego:)&nbsp;<o:p>
+          </o:p>
+          </p>
+       <p class=9ptV align=justify> >Do zobaczenia w kolejnym odcinku, w którym będzie o
+          innych<font color="#4048A8"> </font><font color="#000000"><b>instrukcjach
+          sterujących &#8211; pętlach.</b></font></p>
+          <p class="MsoNormal">&nbsp;</p>
+          <p class=9ptV align=right><font color=#000000><b>Ralfik</b><br> </font><a href=mailto:ralphick@poczta.onet.pl class=link2><font color=#4048A8>ralphick@poczta.onet.pl</font></a><p class=9ptV align=left><font color="#000000">PS.</font>
+            <font color="#000000">Przepraszam za wygląd przykładów, ale nie mogłem ich inaczej
+          ustawić - Djjasiek</font></td></tr></table></div></td></tr><tr><center><td width=100% height=20 valign=bottom></center><div align=center><table border=0 width=586 height=20 cellspacing=0 cellpadding=0><tr><td width=135 background=../img/line3.gif><p align=right><img border=0 src=../img/line.gif width=9 height=20></td><center><td width=310 valign=bottom><p align=center class=9ptV><a href="19.htm" class="link2"><font color=#4048A8>poprzednia strona</font></a><font color=#4048A8> :: </font><a href=spis.htm class=link2><font color=#4048A8>spis treści</font></a><font color=#4048A8> :: </font><a href="21.htm" class="link2"><font color=#4048A8>następna strona</font></a></td><td width=135 background=../img/line3.gif><img border=0 src=../img/line2.gif width=9 height=20></td></tr></table></center></div></td></tr><tr><td width=100% height=20 valign=top>&nbsp;</td></tr><tr><td width=100% height=25 valign=middle bgcolor=#4048A8><div align=center><table border=0 width=583 cellspacing=0 cellpadding=0><center><td width=596 class=9ptV valign=bottom colspan=6><p class=9ptV align=center><font color=#FFFFFF><b>WSZELKIE PRAWA ZASTRZEŻONE :: COPYRIGHT &copy; LOOPUSNET/MAGAZIN 2001-2002</b></font></td></center><center></table></center></div></td></tr><tr><td width=100% height=20 valign=top>&nbsp;</td></tr></table></div></body></html>

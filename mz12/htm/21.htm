@@ -1,0 +1,170 @@
+<html><head><meta http-equiv=Content-Type content="text/html; charset=iso-8859-2"><link rel=stylesheet href=magazin.css TYPE=text/css><title>MagaZin
+#12 :: sierpień 2002</title></head><body link=#478DE7 vlink=#478DE7 alink=#478DE7 topmargin=0 bottommargin=0 bgcolor=#000000><div align=center><center><table border=0 width=650 style="border-style: solid; border-width: 0" cellspacing=0 cellpadding=0 height=100% bgcolor=#FFFFFF><tr><td width=100% height=20 valign=top></td></tr></center><tr><td width=100% height=25 valign=middle bgcolor=#4048A8><div align=center><table border=0 width=583 cellspacing=0 cellpadding=0><center><td width=400 class=9ptV valign=bottom colspan=3><p class=9ptV><font color=#FFFFFF><b>MAGAZIN
+            #12 :: STRONA 21</b></font></td></center><td width=133 class=9ptV valign=bottom><p align=right><font color=#FFFFFF><img border=0 src=../img/direct.gif width=7 height=10><img border=0 src=../img/direct3.gif width=7 height=10><img border=0 src=../img/direct2.gif width=7 height=10></font></td><center><td width=8 class=9ptV valign=bottom></td><td width=55 class=9ptV><b><font color=#FFFFFF>KOMPUTER</font></b></td></table></center></div></td></tr><center><tr><td width=100% height=5 valign=top><p class=9ptV>&nbsp;</td></tr><tr><td width=100% height=20 valign=bottom></center><div align=center><table border=0 width=586 height=20 cellspacing=0 cellpadding=0><tr><td width=135 background=../img/line3.gif><p align=right><img border=0 src=../img/line.gif width=9 height=20></td><center><td width=310 valign=bottom><p align=center class=9ptV><a href="20.htm" class="link2"><font color=#4048A8>poprzednia strona
+              </a> :: </font><a href=spis.htm class=link2><font color=#4048A8>spis treści</font></a><font color=#4048A8> :: </font><a href="22.htm" class="link2"><font color=#4048A8>następna strona</font></a></td><td width=135 background=../img/line3.gif><img border=0 src=../img/line2.gif width=9 height=20></td></tr></table></center></div></td></tr><center><tr><td width=100% height=5 valign=top><p class=9ptV>&nbsp;</td></tr><tr><td width=100% height=21 valign=top><div align=center><center><table border=0 width=600 cellspacing=0 cellpadding=6 height=20 bgcolor=#FFFFFF><tr><td width=285 height=20 valign=top class=9pt><div align=center><center><table border=0 width=100% cellspacing=0 cellpadding=0><tr><td width=100% valign=top class=9ptV height=15><i>Software</i></td></tr><tr><td width=100%><p class=u>Kurs WML
+                      #8</td></tr></table></center></div><p class=9ptV align=justify><b>PHP</b><br>
+              <br>
+              W tym rozdziale zamierzam wprowadzić czytelnika do świata PHP. Nie ma to być w żadnym bądź razie podręcznik tego języka- jest to bowiem kurs WML, a ta część ma wskazać w jaki sposób możemy wykorzystać PHP, ma zachęcić do nauczenia się tego języka - będziesz wtedy mógł tworzyć interaktywne, profesjonalne witryny zarówno WML jak i HTML !!!&nbsp;<br>
+              <br>
+              <b>
+              Co to jest PHP ?</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+     Mówiąc najprościej jest to środowisko programistyczne, umożliwiające łączenie kodu WML (lub HTML) i kodu skryptu. Język PHP jest kodem skryptowym, który jest wykonywany po stronie serwera. Co to oznacza ? Otóż jeśli oglądasz jakąś stronę stworzoną z użyciem PHP, to poza rozszerzeniem pliku ( .php lub .php3) nie znajdziesz w takim kodzie niczego szczególnego. Po prostu wszystkie funkcje wykonywane są jeszcze na serwerze, a do Ciebie dociera gotowy, wygenerowany kod
+              WML.<br>
+              <br>
+              <b>
+              Jak umieścić kod PHP w kodzie wml ?</b><br><br>
+     Najprościej będzie zrobić to używając znaczników <font color="#4048A8"> &lt;? echo "Witaj Swiecie" ?></font> Bardziej zalecane jest jednak użycie znaczników
+              <font color="#4048A8"> &lt;?PHP echo "Witaj Swiecie" ?></font> Oczywiście plik z takimi znacznikami trzeba jeszcze zapisać z rozszerzeniem
+              <font color="#4048A8"> .php </font> lub <font color="#4048A8"> .php3</font> i od tej chwili staje się on programem PHP.<br>
+              Pamiętaj że PHP różnicuje duże i małe litery ! Wszystkie instrukcje PHP muszą być zakończone średnikami ! Podobnie jak w wml, tu także możesz stosować komentarze, mają one jednak odmienną budowę;<br>
+              <font color="#4048A8">
+              <br>
+              /* to jest komentarz */<br>
+              // to także jest komentarz<br>
+              # a to ostatni sposob na komentarze w PHP<br>
+              </font>
+              <br>
+              I na tym wypada mi zakończyć te kilka słów wprowadzenia do PHP - to naprawdę zbyt obszerny temat, aby w kilku zdaniach nauczyć programowania, a poza tym to jest kurs WML, a nie PHP. Poniżej pokażę w jaki sposób można wykorzystać PHP do przetwarzania danych z formularzy. Mam nadzieję że te prościutkie skrypty nie sprawią kłopotu.<br>
+              <br>
+              <b>
+              Przykład 1</b><br><br>
+              W rozdziale "FORMULARZE" dowiedziałeś się w jaki sposób można stworzyć pola tekstowe, aby stworzyć komunikację z użytkownikiem serwisu. Uciąłem jednak w pewnym miejscu, streszczając że resztą zajmuje się skrypt. Przypomnijmy;&nbsp;<br>
+              <br>
+              <font color="#4048A8">
+              &lt;card id="pierwsza" title="formularze"><br>
+ &lt;do type="accept" label="Wyslij"><br>
+  &lt;go href="wynik.php?imie=$(imie)&amp;amp;lat=$(wiek)"/><br>
+ &lt;/do><br>
+   &lt;p>Podaj imie:&lt;input type="text" name="imie"/>&lt;br/><br>
+    Podaj wiek:&lt;input type="text" name="wiek" format="NN"/><br>
+   &lt;/p><br>
+              &lt;/card></font><br>
+              <br>
+              <br>
+              <br>
+              Ten plik proponuję zapisać w pliku <font color="#4048A8"> "form.wml"</font><br>
+              Warto zwrócić uwagę na trzecią linijkę kodu; przy adresie do którego ma się odwoływać odnośnik
+              (<font color="#4048A8">wynik.php</font>) pojawił się znak zapytania i różne dziwne znaczki. Otóż w ten sposób przekazujemy do następnej karty dane pobrane z formularza. Każda zmienna (poprzedzona znakiem dolara) reprezentuje jedno pole. Np. wartość zmiennej $wiek, zostaje teraz zapisana w zmiennej $lat i taką nazwą zmiennej będziemy się posługiwali wykorzystując dane z formularza na następnej karcie. Analogiczna sytuacja ze zmienną $imie.<br>
+              <br>
+              A oto kod źródłowy pliku wynik.php do którego odwoływał się link na poprzedniej karcie;<br>
+              <br>
+              <font color="#4048A8">
+ 1<br>
+ 2<br>
+ 3<br>
+ 4<br>
+ 5<br>
+ 6<br>
+ 7<br>
+ 8<br>
+ 9<br>
+              10<br>
+              11<br>
+              12<br>
+              13<br>
+              <br>
+ &lt;?PHP<br>
+ header ("Content-type: text/vnd.wap.wml");<br>
+ echo "&lt;?xml version=\"1.0\"?>";<br>
+              ?><br>
+              &lt;!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"<br>
+		"http://www.wapforum.org/DTD/wml_1.1.xml"><br>
+ &lt;wml><br>
+  &lt;card id="card1" title="Karta z PHP"><br>
+   &lt;p align="center">Witaj &lt;?PHP echo $imie; ?> !&lt;br/><br>
+    Masz&lt;?PHP echo $lat; ?> lat !<br>
+   &lt;/p><br>
+  &lt;/card><br>
+ &lt;/wml&gt;</font><p class=9ptV align=justify>Pierwsze cztery linie kodu są potrzebne aby serwer rozpoznał dokument
+              wml. Następne linie to już zwykły kod wml, pomijając dwa miejsca oznaczone jako kod
+              PHP. Weźmy pierwszy z nich;<br>
+              <br>
+              <font color="#4048A8">&lt;?PHP echo $imie; ?></font><br>
+              <br>
+              Jest to funkcja echo, która wyświetla po prostu łańcuch znaków. W tym przypadku wyświetla wcześniej w formularzu, ona zmienną
+              $imie, czyli słowo które wpisaliśmy ale moglibyśmy zamiast zmiennej wpisać obojętne jakie słowo, zdanie, zawsze funkcja ta wyświetliła by je jak zwykły kod
+              wml. Sytuację analogiczną zauważamy przy następnym fragmencie kodu, wyróżnionym znacznikami początku i końca skryptu PHP - tutaj pojawia się liczba jaką wpisaliśmy w formularzu w polu obok "Podaj wiek"<br>
+              Załóżmy że w formularzu wpiszesz jako imię "TOMEK", a jako wiek "19". Wówczas po naciśnięciu
+              &quot;Wyslij&quot; powinieneś zobaczyć taką kartę jak ta obok;<br>
+            </td><td width=285 height=20 valign=top class=9pt></center></center>
+          <p class="9ptV" align="justify"><br>
+          <b>
+          Przykład 2</b><br><br>
+          Teraz spróbujemy ze skryptem który będzie wysyłał wyniki formularza na podany adres e-mail.<br>
+          Powiedzmy że chcemy zbierać adresy odwiedzających naszą witrynę, aby potem móc ich informować o aktualizacjach i zapraszać do ponownych odwiedzin. W tym celu, najpierw tworzymy prostą kartę wml, zawierającą jedno pole tekstowe.<br>
+          <br>
+          <font color="#4048A8">
+          &lt;?xml version="1.0"?><br>
+          &lt;!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"<br>
+	"http://www.wapforum.org/DTD/wml_1.1.xml"><br>
+ &lt;wml><br>
+  &lt;card id="pierwsza" title="Obsluga formularza"><br>
+   &lt;do type="accept" label="Wyslij"><br>
+	&lt;go href="mail.php?adres=$(mail)"/><br>
+   &lt;/do><br>
+	&lt;p><br>
+     Podaj adres:&lt;input type="text" name="mail"/><br>
+	&lt;/p><br>
+  &lt;/card><br>
+ &lt;/wml><br>
+          </font>
+          <br>
+          Po wybraniu "Wyslij" ciąg znaków który wpisaliśmy w polu "Podaj adres" zostanie przesłany do pliku
+          <font color="#4048A8"> mail.php</font> ukryty pod zmienną $adres. A oto kod źródłowy pliku
+          <font color="#4048A8">mail.php</font>;<br><br> <font color="#4048A8"> 1<br>
+          2<br>
+          3<br>
+          4<br>
+          5<br>
+          6<br>
+          7<br>
+          8<br>
+          9<br>
+          10<br>
+          11<br>
+          12<br>
+          13<br>
+          14<br>
+          15<br>
+          17<br>
+          18<br>
+          19 &lt;?PHP<br>
+ header ("Content-type: text/vnd.wap.wml");<br>
+ echo "&lt;xml version=\"1.0\"?>";<br>
+          ?><br>
+          &lt;!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"<br>
+          "http://www.wapforum.org/DTD/wml_1.1.xml"><br>
+ &lt;wml><br>
+          &lt;?PHP<br>
+ $temat="To jest list z wml";<br>
+ $adresat="liberator@hot.pl";<br>
+ $tresc="Adres odwiedzającego stronę: $adres";<br>
+ mail($adresat, $temat, $tresc, "From: Skrypt PHP &lt;liberator@hot.pl>");<br>
+          ?><br>
+  &lt;card id="card1" title="Wysylka"><br>
+   &lt;p align="center">Wiadomosc zostala wyslana<br>
+   &lt;/p><br>
+  &lt;/card><br>
+ &lt;/wml>&nbsp;</font><br>
+          <br>
+          Jak pewnie zauważyłeś ten skrypt jest trochę bardziej skomplikowany od poprzedniego. Pierwsze cztery linie spełniają tą samą funkcję co w poprzednim przykładzie, dalej od 5 do 7 prolog i znacznik otwierający dokument wml.<br>
+          Linie 8 do 11 to określanie zmiennych potrzebnych w skrypcie do wysłania mail`a; zaraz dowiesz się jak ich użyjemy.<br>
+          Zmienna którą nazwałem $temat określa temat listu który zostanie wysłany, $adresat to adres na który ma być wysłany list, $tresc to zawartość przesyłki; "Adres odwiedzającego stronę: $adres", jak zauważyłeś wreszcie użyliśmy zmiennej którą określiła osoba wypełniająca formularz, czyli jej adres e-mail.<br>
+          Linia 12 to funkcja wysyłająca pocztę elektroniczną; tworzymy ją w następujący sposób:<br>
+          <font color="#4048A8">
+          <br>
+          mail(odbiorca_przesyłki temat_listu treść_wiadomości dodatkowe_nagłówki)</font><br>
+          <br>
+          W naszym przypadku odbiorcą przesyłki jest adres który "kryje się" pod zmienną $adresat, analogicznie temat_listu to $temat, treść_wiadomości to $tresc, możemy jeszcze zdefiniować jaki będzie adres zwrotny listu. Prawda, że łatwe ?<br>
+          Linia 13 to oczywiście zamknięcie skryptu, a pozostałe to kod karty wml jaka będzie się pojawiać po wysłaniu listu.<br>
+          <br>
+          Mam nadzieję że powyższe przykłady nie tylko okażą się przydatne, ale i zachęcą do nauki programowania w PHP. Polecam książkę wydawnictwa Helion pt.
+          <font color="#4048A8"> "PHP3 Internetowe aplikacje bazodanowe"</font> oraz małą acz bardzo przydatną książeczkę
+          <font color="#4048A8"> "PHP Leksykon kieszonkowy&quot;</font>. Odradzam zaś chyba pierwszą w ogóle publikację na temat PHP -
+          <font color="#4048A8"> "PHP3"</font> autorstwa Leona Atkinsona- jeżeli wcześniej nie programowałeś w żadnym języku, to możesz mieć trudności ze "strawieniem" tej pozycji.<br>
+          A może piszesz już programy PHP i chciałbyś podzielić się z innymi jakimś przydatnym przy tworzeniu kart wml skryptem ? Jeśli tak to podeślij mi go, a znajdzie się w następnej wersji kursu.<br>
+          Programistom którzy wolą wykorzystywać napisane już skrypty polecam stronę
+          <font color="#4048A8"><a href="http://www.hotscripts.com"> www.hotscripts.com</a></font> - znajdziecie tam całe multum programów nie tylko w PHP.<br>
+          </p>
+          <p class=9ptV align=justify><br></p><p class=9ptV align=right><font color=#000000><b>Tomasz Libera</b><br> </font><a href=mailto:liberator@hot.pl class=link2><font color=#4048A8>liberator@hot.pl</font></a></td></tr></table></div></td></tr><tr><center><td width=100% height=20 valign=bottom></center><div align=center><table border=0 width=586 height=20 cellspacing=0 cellpadding=0><tr><td width=135 background=../img/line3.gif><p align=right><img border=0 src=../img/line.gif width=9 height=20></td><center><td width=310 valign=bottom><p align=center class=9ptV><a href="20.htm" class="link2"><font color=#4048A8>poprzednia strona
+              </a> :: </font><a href=spis.htm class=link2><font color=#4048A8>spis treści</font></a><font color=#4048A8> :: </font><a href="22.htm" class="link2"><font color=#4048A8>następna strona</font></a></td><td width=135 background=../img/line3.gif><img border=0 src=../img/line2.gif width=9 height=20></td></tr></table></center></div></td></tr><tr><td width=100% height=20 valign=top>&nbsp;</td></tr><tr><td width=100% height=25 valign=middle bgcolor=#4048A8><div align=center><table border=0 width=583 cellspacing=0 cellpadding=0><center><td width=596 class=9ptV valign=bottom colspan=6><p class=9ptV align=center><font color=#FFFFFF><b>WSZELKIE PRAWA ZASTRZEŻONE :: COPYRIGHT &copy; LOOPUSNET/MAGAZIN 2001-2002</b></font></td></center><center></table></center></div></td></tr><tr><td width=100% height=20 valign=top>&nbsp;</td></tr></table></div></body></html>

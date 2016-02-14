@@ -1,0 +1,231 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="magazin.css" TYPE="text/css">
+<title>MagaZin #5 :: listopad 2001</title>
+</head>
+
+<body link="478DE7" vlink="478DE7" alink="478DE7" topmargin="0" bottommargin="0" bgcolor="#000000">
+<div align="center">
+  <center>
+  <table border="0" width="700" cellspacing="0" cellpadding="0" height="1" bgcolor="#FFFFFF">
+    <tr>
+      <td width="697" height="154" valign="top"><img border="0" src="../img/up.png" width="700" height="150"></td>
+    </tr>
+  </center>
+    <tr>
+      <td width="697" height="1" valign="top">
+        <table border="0" width="700" cellspacing="0" cellpadding="0" height="1" bgcolor="#FFFFFF">
+          <tr>
+            <center>
+            <td width="697" height="1" valign="top"></center>
+            <div align="center">
+              <center>
+              <table border="0" width="92%" cellspacing="0" cellpadding="4">
+                <tr>
+                  <td width="10%" valign="middle"><a href="23.htm"><img border="0" src="../img/4.gif" align="right" width="50" height="25"></a></td>
+                  <td width="23%" valign="middle"><font face="Arial" size="1">poprzednia</font></td>
+                  <td width="33%" valign="middle">
+                    <p align="center"><a href="spis.htm"><img border="0" src="../img/6.gif" width="200" height="20"></a></td>
+                  <td width="23%" valign="middle">
+                    <p align="right"><font size="1" face="Arial">następna</font></td>
+                  <td width="10%" valign="middle"><a href="25.htm" class="link2"><img border="0" src="../img/3.gif" width="50" height="25"></a></td>
+                </tr>
+              </table>
+              </center>
+            </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    </tr>
+  <center>
+    <tr>
+      <td width="697" height="83" valign="top">
+        <div align="center">
+          <center>
+          <table border="0" width="92%" height="1" cellspacing="10" cellpadding="2">
+            <tr>
+              <td width="100%" height="5" valign="top" colspan="2"></td>
+            </tr>
+            <tr>
+              <td width="100%" height="16" valign="top" bgcolor="#000000" colspan="2"><img border="0" src="../img/13a.gif" width="225" height="14"></td>
+            </tr>
+            <tr>
+              <td width="100%" height="1" valign="top" colspan="2"><font face="Arial" size="2"><br>
+                </font>
+                <div align="center">
+                  <center>
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="64%" valign="top" height="30"><font class="u">Kurs
+                        JavaScript, cz. 4</font>
+                      </td>
+                    </center>
+          </center>
+  </center>
+                  <td width="36%" valign="top" height="30">
+                    <p align="right"></td>
+                </tr>
+              </table>
+            </div>
+  <center>
+          <center>
+          </center></center>
+    </td>
+            </tr>
+            <tr>
+              <td width="50%" height="112" valign="top">
+            <p align="justify"><font class="9pt">Można zadać pytanie - co wspólnego
+                mają ramki z JavaScript?. Otóż dzięki ramkom możliwa jest wymiana informacji
+                pomiędzy dokumentami HTML. O tym wyjaśnię w dalszej części tego kursu. Na
+                początek przypomnijmy ogólną definicję tworzenia ramki.<br>
+                <br>
+                <font class=9ptv>
+                <font color="#478DE7">
+                &lt;FRAMESET ROWS="50%,50%"><br>
+                &lt;FRAME SRC="strona1.htm" NAME="ramka1"><br>
+                &lt;FRAME SRC="strona2.htm" NAME="ramka2"><br>
+                &lt;/FRAMESET></font><br>
+                <br><font class=9pt>
+                Jak widać powyższa procedura tworzy dwie ramki. Są one napisane w
+                tagach HTMLa. Tworzą one dwie ramki rozłożone w poziomie strony. Jedna zawiera dokument strony1, a druga dokument strony2.
+                Każda z ramek ma przypisaną nazwę (ramka1 oraz ramka2), którą
+                będziemy wykorzystywać przy odwoływaniu się do nich.<br>
+                <br>
+                <b>
+                Ramki i JavaScript</b><br>
+                <br>
+                Teraz zajmiemy się ramkami w JavaScripcie. Ramki w JavaScripcie
+                są oparte na hierarchizacji strony. Dokument tworzący ramki ma status
+                &quot;parent&quot;, a strony
+                wyświetlane w ramkach mają status &quot;children&quot;. Oczywiście każdy dokument
+                wyświetlany w ramkach posiada inną unikalną nazwę, gdyż bez takowej
+                odwoływanie się do nich nie byłoby możliwe.<br>
+                <br>
+                <b>
+                Komunikacja pomiędzy ramkami</b><br>
+                <br>
+                Dzięki znajomości hierarchizacji oraz statusu ramek możemy
+                wymienić informacje pomiędzy ramkami. W tym celu musimy napisać
+                poniższe polecenie:<br>
+                <br></font>
+                <font class=9ptv>
+                <font color="#478DE7">
+                ramka2.document.write("Tu ramka 2.");
+                </font><br>
+                <br>
+                <font class=9pt>
+                W ten sposób z dokumentu tworzącego ramki (parent) możemy
+                przekazać informacje do dowolnego dokumentu ramki. Należy tylko
+                pamiętać o podaniu prawidłowej nazwy ramki, w której ma się
+                ukazać nasz tekst.<br>
+                <br>
+                Jeśli chcemy przekazać informacje z jednej ramki do drugiej musimy
+                postąpić według poniższego przykładu:<br>
+                <br>
+                <font class=9ptv>
+                <font color="#478DE7">
+                parent.ramka2.document.write("Tu ramka 2.");</font><br>
+                <br><font class=9pt>
+                Teraz stwórzmy dwie ramki, które po naciśnięciu przycisku w jednej
+                odsyłała by nas do strony Wirtualnej Polski.<br></font></font></font></font></font></font>
+                
+              <td width="50%" height="93" valign="top">
+                <p align="justify"><font class=9pt>
+ W tym celu tworzymy plik o nazwie index.htm (nazwa
+                według twojego gustu :-) W nim definiujemy ramki:<br>
+                <br>
+                <font class=9ptv>
+                <font color="#478DE7">&lt;HTML><br>
+                &lt;frameset rows="*,20%"><br>
+                &lt;frame name="gora" target=&quot;footnotes&quot;<br>
+                src=&quot;gora.htm&quot;&gt;<br>
+                &lt;frame name="dol" src="dol.htm"><br>
+                &lt;noframes><br>
+                &lt;/frameset><br>
+                &lt;HTML&gt;</font><br>
+                <br>
+                <font class=9pt>Teraz tworzymy stronę o nazwie gora.htm.
+                W niej będzie pojawiała się
+                strona Wirtualnej Polski.<font class="9pt">
+                <br>
+                Tworzymy drugą stronę o nazwie dol.htm. Chcemy w niej
+                zdefiniować guzik, który powodowałby po naciśnięciu, iż zostaniemy przeniesieni do Wirtualnej Polski. W tym celu musimy
+                napisać:<br>
+                <br><font class=9ptv>
+                <font color="#478DE7">
+                &lt;HTML><br>
+                &lt;HEAD><br>
+                &lt;SCRIPT LANGUAGE="JavaScript"><br>
+                <br>
+                function wp()<br>
+                {<br>
+                parent.gora.location.href="http://wp.pl";<br>
+                }<br>
+                <br>
+                &lt;/SCRIPT><br>
+                &lt;/HEAD><br>
+                &lt;BODY><br>
+                &lt;FORM><br>
+                &lt;INPUT TYPE="button" VALUE="Wirtualna Polska" onClick="wp()"><br>
+                &lt;/FORM><br>
+                &lt;/BODY><br>
+                &lt;/HTML&gt;</font><br>
+                <br>
+                <font class=9pt>
+                Możemy także urozmaicić
+ ten skrypt tworząc pole, w którym
+                możemy wpisać dowolny adres WWW.<br>
+                W pliku dol.htm w skrypcie dopisujemy:<br>
+                <br><font class=9ptv>
+                <font color="#478DE7">
+                function przegladarka()<br>
+                {<br>
+                parent.gora.location.href =<br>
+                document.przeg.adres.value ;<br>
+                }</font><br>
+                <br><font class=9pt>
+                Następnie
+                pomiędzy tagami &lt;BODY> &lt;/BODY>:</font><br>
+                <br><font class=9ptv>
+                <font color="#478DE7">
+                &lt;FORM name="przeg"><br>
+                &lt;INPUT TYPE="text" VALUE="" name="adres"><br>
+                &lt;INPUT TYPE=&quot;button&quot; VALUE=&quot;Hop!!&quot;<br>
+                onClick=&quot;przegladarka()&quot;&gt;<br>
+                &lt;/FORM></font><br>
+                <br>
+
+                
+                </font></font></font></font></font></font></font></font>
+
+                
+            </tr>
+            <tr>
+              <td width="100%" height="1" valign="top" colspan="2">
+              <p align="right"><font class="9pt"><b>Allo</b><a href="mailto:chelmos@friko6.onet.pl" class="link"><br>
+              chelmos@friko6.onet.pl</a><br>
+
+              </font>
+
+            </tr>
+            <tr>
+            <td width="100%" height="1" valign="middle" colspan="2" bgcolor="#000000"><b><font face="Verdana" color="#FFFFFF" size="1">&nbsp;Copyright
+              &copy; MagaZin 2001</font></b></td>
+            </tr>
+  </table>
+          <table border="0" width="92%" height="1" cellspacing="10" cellpadding="2">
+  <center>
+  </table>
+        </div>
+          </center>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

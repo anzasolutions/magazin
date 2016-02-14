@@ -1,0 +1,531 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="magazin.css" TYPE="text/css">
+<title>MagaZin #5 :: listopad 2001</title>
+</head>
+
+<body link="478DE7" vlink="478DE7" alink="478DE7" topmargin="0" bottommargin="0" bgcolor="#000000">
+<div align="center">
+  <center>
+  <table border="0" width="700" cellspacing="0" cellpadding="0" height="1" bgcolor="#FFFFFF">
+    <tr>
+      <td width="697" height="154" valign="top"><img border="0" src="../img/up.png" width="700" height="150"></td>
+    </tr>
+  </center>
+    <tr>
+      <td width="697" height="1" valign="top">
+        <table border="0" width="700" cellspacing="0" cellpadding="0" height="1" bgcolor="#FFFFFF">
+          <tr>
+            <center>
+            <td width="697" height="1" valign="top"></center>
+            <div align="center">
+              <center>
+              <table border="0" width="92%" cellspacing="0" cellpadding="4">
+                <tr>
+                  <td width="10%" valign="middle"><a href="27.htm"><img border="0" src="../img/4.gif" align="right" width="50" height="25"></a></td>
+                  <td width="23%" valign="middle"><font face="Arial" size="1">poprzednia</font></td>
+                  <td width="33%" valign="middle">
+                    <p align="center"><a href="spis.htm"><img border="0" src="../img/6.gif" width="200" height="20"></a></td>
+                  <td width="23%" valign="middle">
+                    <p align="right"><font size="1" face="Arial">następna</font></td>
+                  <td width="10%" valign="middle"><a href="29.htm" class="link2"><img border="0" src="../img/3.gif" width="50" height="25"></a></td>
+                </tr>
+              </table>
+              </center>
+            </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    </tr>
+  <center>
+    <tr>
+      <td width="697" height="83" valign="top">
+        <div align="center">
+          <center>
+          <table border="0" width="92%" height="243" cellspacing="10" cellpadding="2">
+            <tr>
+              <td width="100%" height="5" valign="top" colspan="2"></td>
+            </tr>
+            <tr>
+              <td width="100%" height="16" valign="top" bgcolor="#000000" colspan="2"><img border="0" src="../img/13a.gif" width="225" height="14"></td>
+            </tr>
+            <tr>
+              <td width="100%" height="1" valign="top" colspan="2"><font face="Arial" size="2"><br>
+                </font>
+                <div align="center">
+                  <center>
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="64%" valign="top" height="30"><font class="u">Jądro
+                        Linuxa - szlifowanie systemu</font>
+                      </td>
+                    </center>
+          </center>
+  </center>
+                  <td width="36%" valign="top" height="30">
+                    <p align="right"></td>
+                </tr>
+              </table>
+            </div>
+  <center>
+          <center>
+          </center></center>
+    </td>
+            </tr>
+            <tr>
+              <td width="50%" height="354" valign="top">
+                <p align="justify"><font class=9pt>
+Kompilacja jądra Linuksa (kernela) to przerażająca perspektywa dla początkujących użytkowników. Na szczęście, nie taki diabeł straszny jak go malują.&nbsp;<br>
+Jądro systemu to najważniejsza część Linuksa - jest to kod stanowiący "mózg" systemu operacyjnego - zarządzający pamięcią, urządzeniami zewnętrznymi i wszystkimi programami. Kernel wymaga niekiedy rekompilacji z trzech głównych powodów: włączenia obsługi jakiegoś urządzenia (np. sterownika kontrolera
+SCSI), włączenia pewnych funkcji (np. obsługi protokołu PPP) lub zbudowania nowszej wersji zawierającej np. lepsze zabezpieczenia.<br>
+Współczesne dystrybucje Linuksa (takie jak Corel Linux czy Mandrake) instalują jądro przygotowane zoptymalizowane pod kątem jak największej ilości użytkowników, ale i tak niektóre ustawienia zostały wyłączone ponieważ "gryzą" się z innymi, stąd niekiedy pojawia się konieczność wyboru własnych ustawień i rekompilacji. Rekompilacja jądra to najważniejszy element procesu "dostrajania"
+(tuning) wydajności systemu. Jeśli jednak twój system działa zgodnie z oczekiwaniami, to wymiana jądra nie jest istotna, a może wręcz niekiedy powodować problemy. Trzeba również pamiętać, że nieuważna/bezmyślna rekonfiguracja parametrów może np. doprowadzić do tego, że nie będziesz mógł uruchomić systemu.<br>
+Samo jądro jest rozprowadzane w postaci pliku binarnego .tgz lub pakietów RPM czy
+DEB, jest to kod źródłowy, który każdy może oglądać i poprawiać. System numeracji jądra pozwala na określenie, która wersja jest potrzebna: pierwsza cyfra to od wielu lat 2 (jest to seria produkcyjna jądra), druga określa status jądra. Parzysta oznacza wersję stabilną, a nieparzysta - eksperymentalne lub rozwojowe, czyli aktualnie rozwijane przez setki programistów na świecie. Po przetestowaniu i usunięciu błędów jądro rozwojowe staje się jądrem stabilnym (oczywiście niecierpliwi mogą do woli próbować wersji rozwojowych). Ostatnia cyfra to numer kolejnej wersji tej serii
+kernela. Nowe wersje stabilne pojawiają się co
+kilka tygodni, a rozwojowe - nawet z dnia na dzień.<br>
+Źródła jądra Linuksa są dostępne na większości serwerów z linuksowym oprogramowaniem. W Polsce są to&nbsp;
+<a href="ftp://sunsite.icm.edu.pl" class=link>ftp://sunsite.icm.edu.pl</a> i <a href="ftp://ftp.task.gda.pl" class=link> ftp://ftp.task.gda.pl</a>. Oba są mirrorowane na bieżąco i można tam znaleźć aktualne źródła jądra tuż po światowej premierze. Odpowiednie pliki znajdują się  w katalogu
+/pub/linux/kernel/numer_wersji. Zazwyczaj znajdują się tam pliki linux-2.x.x.tar.gz i linux-2.x.x.tar.bz2 - te pierwsze spakowane programem
+gzip, a drugie bzip2. Najlepiej jest oczywiście wybrać mniejszy plik (zazwyczaj .bz2), o ile w Twoim systemie jest zainstalowany bzip2. Często oprócz plików linux-2.x.x.tar.gz można jeszcze znaleźć pliki patch-2.x.x.gz. Są w nich zapisane zmiany w stosunku do poprzedniej wersji jądra ("łatki", uaktualnienia). Dzięki temu, jeżeli masz np. źródła kernela 2.2.10, zamiast wielomegabajtowego pliku linux-2.2.13.tar.gz możesz ściągnąć 3 małe pliki: patch-2.2.11.gz, patch-2.2.12.gz i patch-2.2.13.gz.<br>
+Po ściągnięciu plików logujemy się jako root i kopiujemy plik zawierający źródła do katalog
+/usr/src. Prawdopodobnie znajduje się tam katalog zawierający starszą wersję jądra o nazwie linux-2.x.x i plik o nazwie
+linux, będący dowiązaniem (linkiem) symbolicznym do tego katalogu. Kasujemy ten plik, rozpakowujemy źródła poleceniem
+&quot;gunzip linux-2.x.x.tar.gz" lub "bunzip2 linux-2.x.x.tar.bz2", następnie odtwarzamy strukturę katalogów poleceniem "tar
+-xvf linux-2.x.x.tar". Po chwili powstaje podkatalog linux, zawierający rozpakowane źródła. Jeżeli chcesz natomiast skorzystać z
+patcha, skopiuj go do tego katalogu, rozpakowuj (gunzip lub bunzip2) i wydaj polecenie:
+&quot;patch -p1 &lt; patch-2.x.x". Jeżeli nie wystąpiły przy tym żadne błędy, można przystąpić do konfiguracji jądra.
+<br>
+<br>
+<b>
+Konfiguracja jądra</b><br>
+<br>
+Konfiguracji jądra można dokonać na trzy sposoby - najstarszy z nich to tekstowy, wywoływany poleceniem
+&quot;make config&quot; (oczywiście z katalogu /usr/src/linux&quot;). Jest on niewygodny i używany gdy zawiodą inne sposoby. Drugi sposób to
+&quot;make menuconfig&quot;. Pozwala on na wygodną konfigurację z użyciem systemu tekstowych menu. Wreszcie najwygodniejszy -
+&quot;make xconfig&quot; - oczywiście działa tylko, dgy zostanie uruchomiony w oknie X terminala. Warto nadmienić, że we wszystkich trzech trybach dostępna jest - zawsze ta sama - pomoc do prawie każdej z opcji. Zobaczmy, do czego służą najważniejsze opcje konfiguracyjne jądra - pomijamy te, które są rzadko używane, nieistotne jak również sterowniki w wersji eksperymentalnej. Oczywiście przy zaznaczaniu każdej opcji należy przeczytać tekst pomocy, zazwyczaj zawiera on wskazówki co do jej przydatności. Całość procesu konfiguracji można podzielić na sekcje "tematyczne" - tak jest to prezentowane przez menu i tak my to
+pokazane zostało poniżej.<br>
+<br>
+<font class=9ptv><font color="#478DE7">
+<b>
+Code maturity level options</b></font><br>
+<br><font class=9pt>
+Ta sekcja zawiera tylko jedną opcję:<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [ ] Prompt for development and/or incomplete code/drivers</font><br>
+<br><font class=9pt>
+Decyduje o tym, czy (x/menu)config będzie pozwalał na wybranie sterowników będących w trakcie testowania. Ponieważ są one wyraźnie oznaczone, warto wybrać tę opcję, by zobaczyć wszystkie
+opcje konfiguracyjne - o tym, czy używać eksperymentalnych sterowników można zdecydować później. Zazwyczaj sterowniki włączone do stabilnej wersji jądra nie zawierają poważnych błędów.
+<br>
+<br>
+<font class=9ptv><b>
+<font color="#478DE7">
+Processor type and features</font><br>
+</b>
+<br><font class=9pt>
+Ta sekcja pozwala na wybranie opcji związanych z procesorem i pamięcią:<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    (PPro/6x86MX) Processor family&nbsp;</font><br>
+<br><font class=9pt>
+Wybór typu procesora: 386, 486, 586, K6, Pentium, Pentium Pro. Zachowana jest kompatybilność w jedną stronę, czyli np. jądro skompilowane dla 486 będzie również działać na Pentium i Pentium II, ale na 386 - nie zawsze.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [ ] Math emulation</font><br>
+<br><font class=9pt>
+Emulacja koprocesora matematycznego. Dla procesorów 486 SX i 386 brak tej opcji może spowodować zawieszenie systemu! Począwszy od 486 DX wszystkie procesory mają wbudowany koprocesor, dla nich ta opcja nie jest potrzebna.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+<b>
+Loadable module support</b></font><br>
+<br><font class=9pt>
+Ta sekcja zawiera opcje związane z modułami jądra<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] Enable loadable module support</font><br>
+<br><font class=9pt>
+Uaktywnienie tej opcji pozwala na skompilowanie części sterowników w postaci modułów, ładowanych w razie potrzeby. Dzięki temu jądro zajmuje minimalną ilość pamięci. Opcja bardzo polecana. W widocznych dalej fragmentach programu
+&quot;menuconfig&quot;, &lt;M> oznacza właśnie opcję wybraną jako moduł , &lt;*> oznacza opcję, która może być modułem, ale została wkompilowana na stałe. [*] to opcja, której nie można wybrać jako moduł. Oczywiście spacja w środku oznacza, że opcja nie została wybrana ani jako moduł, ani do wkompilowania na stałe. W
+&quot;xconfig&quot; odpowiednikiem znaku "[ ]" jest po prostu opcja, w której nie da się wybrać kompilacji jako moduł. Zwykły
+&quot;config&quot; wyświetli w takim wypadku pytanie (Y/n/?) zamiast (Y/m/n/?). Moduły to pliki znajdującymi się w katalogu
+/lib/modules/numer_wersji.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [ ] Set version information on all symbols for modules</font><br>
+<br><font class=9pt>
+Umożliwia załadowanie modułów skompilowanych dla innej wersji jądra. Potrzebne, jeżeli masz sterownik dla jakiegoś urządzenia w postaci skompilowanego modułu (oczywiście tylko do pewnego stopnia). W przeciwnym razie, możesz po prostu po każdej kompilacji jądra skompilować wszystkie moduły.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] Kernel module loader</font><br>
+<br><font class=9pt>
+Automatycznie ładuje moduły, ale tylko wtedy kiedy są one potrzebne - bardzo przydatna opcja.<br>
+<br><font class=9ptv>
+<font color="#478DE7"><b>
+General setup</b></font><br>
+<br><font class=9pt>
+Ta sekcja zawiera ogólne opcje dotyczące jądra systemu:<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] Networking support</font><br>
+<br><font class=9pt>
+Włącza obsługę sieci - nawet jeśli nie korzystasz z sieci, ta opcja jest niezbędna.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] PCI support</font><br>
+<br><font class=9pt>
+Zmień tę opcję tylko, jeżeli nie korzystasz z magistrali PCI (płyty główne 386 i wczesne 486).<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    (Any) PCI access mode</font><br>
+<br><font class=9pt>
+Inne możliwości to &quot;Direct&quot; - szybsza, ale sprawiająca problemy na niektórych, błędnych
+BIOSach, oraz "BIOS" - bezpieczny, ale wolny. &quot;Any&quot; oznacza, że Linux najpierw spróbuje trybu
+&quot;Direct&quot; i jeżeli to się nie uda, przejdzie na "BIOS". Zdecydowanie najlepsze rozwiązanie.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] System V IPC<br>
+    [*] BSD Process Accounting<br>
+    [*] Sysctl support</font><br>
+<br><font class=9pt>
+Opcje umożliwiające komunikację pomiędzy procesami i zmianę niektórych parametrów kernela w trakcie pracy. Wymagane przez większość programów.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> Kernel support for a.out binaries<br>
+    &lt;*> Kernel support for ELF binaries<br>
+    &lt;M> Kernel support for MISC binaries</font><br>
+<br><font class=9pt>
+ELF jest formatem binarnym plików wykonywalnych Linuxa, używanym już od kilku lat,
+&quot;a.out&quot; to stary niewykorzystywany już standard, natomiast &quot;MISC&quot; pozwala na uruchamianie np. programów
+interperetowanych, napisanych np. w Javie czy Pythonie - kernel automatycznie ładuje odpowiedni interpreter.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> Parallel port support<br>
+    &lt;M>    PC-style hardware (NEW)<br>
+    [ ]    Support foreign hardware (NEW)</font><br>
+<br><font class=9pt>
+Obsługa portu równoległego (drukarki). Port równoległy we wszystkich komputerach PC jest oczywiście "PC-style".
+&quot;Foreign hardware&quot; umożliwia załadowanie sterowników do niestandardowych typów portów równoległych - powoduje to jednak pogorszenie wydajności, toteż włącz te opcję tylko, jeżeli jej potrzebujesz.
+<br>
+<br><font class=9ptv>
+<b><font color="#478DE7">
+Plug and Play support</font></b><br>
+<br><font class=9pt>
+Ta sekcja pozwala na automatyczną konfigurację niektórych urządzeń:<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [ ] Plug and Play support<br>
+    &lt; >   Auto-probe for parallel devices (NEW)</font><br>
+<br><font class=9pt>
+Włącza obsługę Plug&amp;Play, wraz z drugą opcją - również dla urządzeń podłączonych do portu równoległego. Obsługa P&amp;P w Linuksie może znacznie ułatwić konfigurację urządzeń. Jeśli wolisz ręcznie skonfigurować urządzenia lub jeśli Plug&amp;Play powoduje w Twoim komputerze problemy, nie uzywaj tej opcji (zwróć uwagę, że programy konfiguracyjne potrafią wykrywać urządzenia i automatycznie określać potrzebne zasoby IRQ czy DMA nawet z wyłączonym Plug&amp;Play - P&amp;P służy do ZMIANY parametrów, a nie ich odczytywania).
+<br>
+<br><font class=9ptv>
+<b><font color="#478DE7">
+Block devices</font></b><br>
+<br><font class=9pt>
+Ta sekcja zawiera opcje dla urządzeń blokowych - głównie pamięci masowej:&nbsp;<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> Normal PC floppy disk support&nbsp;</font><br>
+<br><font class=9pt>
+Sterownik standardowych napędów dyskietek.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;*> Enhanced IDE/MFM/RLL disk/cdrom/tape/floppy support&nbsp;</font><br>
+<br><font class=9pt>
+Obsługa napędów (E)IDE. Wyłącz tylko wtedy gdy korzystasz wyłącznie z dysków
+SCSI. Cztery kolejne opcje są przeznaczone odpowiednio dla dysków, CD-ROMów, streamerów i starszych napędów Iomega ZIP.<br>
+<br><font class=9ptv>
+<font color="#478DE7">&lt;*&gt; Include IDE/ATA-2 DISK support&nbsp;<br>
+&lt;M&gt; Include IDE/ATAPI CDROM support&nbsp;<br>
+&lt; &gt; Include IDE/ATAPI TAPE support&nbsp;<br>
+&lt; &gt; Include IDE/ATAPI FLOPPY support&nbsp;<br>
+&lt; &gt; SCSI emulation support&nbsp;</font><br>
+<br><font class=9pt>
+Emulacja napędu SCSI, pozwala na sterowanie urządzeniem IDE tak jak urządzeniem
+SCSI. Niezbędna w przypadku korzystania z tanich nagrywarek CDRW z interfejsem
+IDE.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [ ]    CMD640 chipset bugfix/support<br>
+    [ ]      CMD640 enhanced support<br>
+    [ ]    RZ1000 chipset bugfix/support</font><br>
+<br><font class=9pt>
+Pozwala na ominięcie błędów w popularnych chipsetach IDE. Jeżeli nie jesteś pewien, jakiego układu używa Twoja płyta główna, bezpieczniej jest włączyć te opcje. (Opcje przeznaczone dla kilku innych chipsetów można uzyskać po zaznaczeniu "Other IDE chipset
+support&quot;.)
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*]    Generic PCI IDE chipset support<br>
+    [*]      Generic PCI bus-master DMA support<br>
+    [*]      Use DMA by default when available</font><br>
+<br><font class=9pt>
+Opcje przeznaczone dla zwykłych kontrolerów (E)IDE. Warto włączyć obsługę DMA dla zwiększenia wydajności.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> Loopback device support</font><br>
+<br><font class=9pt>
+Pozwala na uzywanie pewnych plików jak zwykłych dysku (tylko do odczytu). Najczęściej są to zrzuty (images) zawartości CD-ROM czy dyskietki. Przydatne, jeżeli nagrywasz CD-R lub tworzysz dyskietkowe wersje Linuxa.
+<br>
+<br><font class=9ptv>
+<b><font color="#478DE7">
+Networking options</font></b><br>
+<br><font class=9pt>
+Ta sekcja zawiera kilka istotnych ustawień związanych z kontrolą pakietów TCP/IP i różnych protokołów sieciowych:<br></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font>
+                
+              <td width="50%" height="335" valign="top">
+                <p align="justify"><font class=9pt>
+<font class=9ptv>
+<font color="#478DE7">
+    [ ] Network firewalls</font><br>
+<br><font class=9pt>
+Pozwala na skonfigurowanie firewalla opartego na filtrowaniu pakietów. Musisz też wybrać tę opcję np. jeżeli chcesz skonfigurować maskowanie adresów IP (IP masquerading) czyli udostępnianie jednego połączenia internetowego dla wielu komputerów, nie mających własnego IP. W przeciwnym wypadku zbędne.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] TCP/IP networking</font><br>
+<br><font class=9pt>
+Protokół TCP/IP uzywany jest w internecie i wielu sieciach lokalnych. Niektóre progrmay, np. X-Window, wymagają obsługi TCP nawet, jezeli nie używasz sieci.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [ ] IP: masquerading&nbsp;</font><br>
+<br><font class=9pt>
+Masquerading (maskowanie) pozwala na udostępnianie jednego połączenia sieciowego (również modemu) innym komputerom w sieci lokalnej. Dzięki temu, cała sieć może korzystać z jednego łącza i z jednego IP.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt; > The IPX protocol<br>
+    &lt; > Appletalk DDP</font><br>
+<br><font class=9ptv
+Włącza obsługę protokołów sieciowych, używanych przez Novel Netware i Macintosha.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7"><b>
+SCSI support</b></font><br>
+<br><font class=9pt>
+Obsługa kontrolera SCSI - niezbędna dla użytkowników dysków, CD-ROMów, nagrywarek, skanerów lub innych urządzeń SCSI. Jeśli ją wybierzesz pokaże się zestaw opcji pozwalających na wybranie odpowiedniego typu kontrolera.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7"><b>
+Network device support</b></font><br>
+<br><font class=9pt>
+Ta sekcja pozwala na wybranie karty sieciowej i protokołu PPP:<br>
+<br><font class=9ptv>
+    <font color="#478DE7">
+    &lt; > Dummy net driver support</font><br>
+<br><font class=9pt>
+Sterownik symulujący kartę sieciową. Używany głównie do testowania programów sieciowych.<br>
+<br>
+<b><font class=9ptv><font color="#478DE7">
+    Ethernet (10 or 100Mbit)</font></font></b><font class=9ptv><br>
+<br><font class=9pt>
+Wybór sterownika dla karty sieciowej Ethernet. Po jego zaznaczeniu pojawi się lista opcji pozwalającycch na wybranie typu karty sieciowej.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> PPP (point-to-point) support</font><br>
+<br><font class=9pt>
+Protokół PPP jest używany m.in. przy łączeniu się z Internetem przy użyciu modemu - i w takim też wypadku należy włączyć tę opcję.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> PLIP (parallel port) support (NEW)<br>
+    &lt;M> SLIP (serial line) support</font><br>
+<br><font class=9pt>
+Umożliwia bezpośrednie połączenie dwóch komputerów odpowiednio kablem równoległym i szeregowym.
+<br>
+<br><font class=9ptv>
+<b><font color="#478DE7">
+Character devices</font></b><br>
+<br><font class=9pt>
+Ta sekcja zawiera ustawienia dla urządzeń znakowych - konsoli i drukarek:<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] Virtual terminal</font><br>
+<br><font class=9pt>
+Pozwala na uruchomienie wielu wirtualnych terminali, przełączanych klawiszami. UWAGA! - wyłączenie tej opcji oznacza, że nie będzie można pracować z użyciem monitora i klawiatury, a jedynie poprzez sieć lub port szeregowy.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> Standard/generic (dumb) serial support</font><br>
+<br><font class=9pt>
+Obsługa portu szeregowego (COM1-4 pod DOSem). Jeżeli nie chcesz podłączyć terminala do portu szeregowego, możesz włączyć ten sterownik jako moduł.
+<br><font class=9ptv>
+<br><font color="#478DE7">
+    &lt;M> Parallel printer support<br>
+    [*]   Support IEEE1284 status readback</font><br>
+<br><font class=9pt>
+Umożliwia korzystanie z drukarki podłączonej do portu równoległego. Druga opcja pozwala na dwukierunkową komunikację.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [ ] Mouse Support (not serial mice)</font><br>
+<br><font class=9pt>
+Sterowniki kilku typów myszy NIE PODŁĄCZANYCH do portu szeregowego. Włacz, jeżeli korzystasz z takiej nietypowej myszy.<br>
+<br><font class=9ptv>
+<font color="#478DE7"><b>
+    Video For Linux</b></font><br>
+<br><font class=9pt>
+Nazwa dosyć myląca, jako że większość sterowników z tej kategorii służy do obsługi tunerów radiowych. Z urządzeń video Linux obsługuje m.in. karty telewizyjne oparte na chipie BT848 (czyli wiekszość tanich kart video) oraz kamery QuickCam i QuickCam Color.<br>
+<br><font class=9ptv>
+<b><font color="#478DE7">
+    Joystick support</font></b><br>
+<br><font class=9pt>
+Linux potrafi obsługiwać znaczną ilość joysticków, również "kombajnów" z przepustnicami i wieloma klawiszami, takich jak Microsoft SideWinder (również w wersji Force Feedback Pro) czy Logitech Wingman.
+<br>
+<br><font class=9ptv>
+<font color="#478DE7"><b>
+Filesystems</b></font><br>
+<br><font class=9pt>
+Ta sekcja zawiera opcje dotyczące obsługi różnych systemów plików. UWAGA: dla większej przejrzystości systemy plików są opisane w innej kolejności, niż wyświetla je "make (x/menu)config".<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;*> Second extended fs support</font><br>
+<br><font class=9pt>
+Czyli EXT2 - system plików standardowo używany przez Linuxa. UWAGA - nie wolno kompilować go jako modułu.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> ISO 9660 CDROM filesystem support<br>
+    [*] Microsoft Joliet CDROM extensions</font><br>
+<br><font class=9pt>
+System plików używany do zapisywania CD-ROMów, wraz z rozszerzeniami Microsoftu, pozwalającymi na zapisywanie długich nazw plików w standardzie Windows (również bez tego dodatku możliwe jest odczytywanie CD-ROMów zapisanych w standardzie Rock-Ridge, czyli zawierających rozszerzenia unixowe: długie nazwy plików oraz linki symboliczne - w takim
+standardzie nagrywane są najczęściej płyty z dystrybucjami Linuxa).<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    [*] /proc filesystem support&nbsp;<br>
+    [*] /dev/pts filesystem for Unix98 PTYs</font><br>
+<br><font class=9pt>
+Dwa systemy plików będące w rzeczywistości reprezentacją różnych urządzeń komputera: /dev/pts jest niezbędny do pracy Unix98 PTY, a /proc służy do dwukierunkowej komunikacji między programami a kernelem.<br>
+<br><font class=9ptv>
+<font color="#478DE7">
+    &lt;M> DOS FAT fs support<br>
+    &lt;M>   MSDOS fs support<br>
+    &lt;M>   UMSDOS: Unix-like filesystem on top of standard MSDOS filesystem<br>
+    &lt;M>   VFAT (Windows-95) fs support</font><br>
+<br><font class=9pt>
+Obsługa partycji dosowych na wiele sposobów: "DOS FAT fs" to sterownik niskopoziomowy, z którego korzystają: "MSDOS fs" i "VFAT" - ten ostatni daje oczywiście dostęp do długich nazw plików Windows 95. Z koleji z "MSDOS fs" korzysta bardzo ciekawy sterownik "UMSDOS" - pozwala on na zapisanie Linuxa w jednym pliku na partycji dosowej - dzięki temu można zapoznać się z Linuxem bez podziału dysku na partycję. Ponadto obsługiwane są następujące rodzaje systemów plików: Amiga, Apple Macintosh, NTFS (Windows NT), OS/2 HPFS, System V, UFS, SGI EFS<br>
+<br><font class=9ptv>
+<font color="#478DE7"><b>
+Network File Systems</b><br><br>
+      &lt; > Coda filesystem support (advanced network fs)&nbsp;<br>
+      &lt;M> NFS filesystem support&nbsp;<br>
+      &lt;M> SMB filesystem support (to mount WfW shares etc.)&nbsp;<br>
+      &lt; > NCP filesystem support (to mount NetWare volumes)</font><br>
+<br><font class=9pt>
+Różne rodzaje sieciowych systemów plików. NFS to standardowy sieciowy system plików w świecie uniksów. Coda to nowa wersja NFS. SMB jest używany do współdzielenia dysków w sieciach Windows. NCP pozwala na montowanie dysków Novell Netware.<br>
+<br><font class=9ptv>
+    <font color="#478DE7"><b>
+Native Language Support</b></font><br>
+<br><font class=9pt>
+Moduły pozwalające na używanie w nazwach plików liter spoza zestawu znaków ASCII (nie dotyczy to partycji linuxowych, gdzie obsługa różnych języków jest możliwa bez dodatkowych modułów). W praktyce - niepotrzebne. Przydatne w przypadku montowania partycji Windows, aby był obsługiwany język polski należy wybrać
+    &quot;Codepage 852".
+<br>
+<br><font class=9ptv>
+    <b><font color="#478DE7">
+Console drivers</font></b><br>
+<br><font class=9pt>
+Ta sekcja pozwala na ustawienie kilku ciekawych opcji związanych z konsolą tekstową:<br>
+<br><font class=9ptv>
+    <font color="#478DE7">
+    [*]  VGA text console</font><br>
+<br><font class=9pt>
+Obsługa standardowych kart graficznych (nie tylko VGA - również EGA czy Hercules) w trybie znakowym. Potrzebna zawsze.<br>
+<br><font class=9ptv>
+    <font color="#478DE7">
+    [ ] Support for frame buffer devices (EXPERIMENTAL) (NEW)</font><br>
+<br><font class=9pt>
+Frame buffer jest warstwą pośrednią pomiędzy sprzętem a programami. Jeśli korzystasz z frame buffera, Twój sprzęt nigdy nie pracuje w trybie tekstowym - jest on emulowany właśnie przez tę abstrakcyjną warstwę. Programy korzystające z grafiki, np. x-serwer, odwołują się do frame buffera, a nie bezpośrednio do sprzętu. Oznacza to spowolnienie pracy w większości przypadków i przyspieszenie, jeżeli Twoja karta graficzna jest obsługiwana w trybie akcelerowanym. Frame buffer jest niezbędny na niektórych architekturach innych niż x86, być może upowszechni się on również na platformie PC, zgodnie z tendencją do unifikacji różnych platform.
+<br>
+<br><font class=9ptv>
+    <font color="#478DE7">
+Sound</font><br>
+<br><font class=9pt>
+Ta sekcja pozwala włączenie sterownika karty dźwiękowej i ustawienie jej parametów:
+<br>
+<br><font class=9ptv>
+    <font color="#478DE7">
+    &lt;M> Sound card support</font><br>
+<br><font class=9pt>
+Po zaznaczeniu tej opcji będziesz mógł wybrać odpowiedni sterownik dla swojej karty dźwiękowej - najlepiej jako moduł.
+<br>
+<br>
+    <b>
+Kompilacja i instalacja nowego jądra</b><br>
+<br>
+Po konfiguracji i zapisaniu zmian wydajemy kolejno polecenia (oczywiście czekając na zakończenie pracy poprzedniego):<br>
+<br><font class=9ptv>
+    <font color="#478DE7">
+make dep<br>
+make clean<br>
+make bzImage<br>
+make modules<br>
+make modules_install</font><br>
+<br><font class=9pt>
+Sama kompilacja (czyli "make bzImage") trwa od kilku minut na szybkich Pentium II i Celeronach do kilku godzin na 386. Teraz należy zainstalować nowe jądro. Warto przy tym pozostawić możliwość startu ze starym kernelem, na wypadek gdyby nowy nie działał prawidłowo. Można to zrobić na wiele różnych sposobów, poniższy przykład został przetestowany z jądrami 2.0.x, 2.2.x i 2.3.x ("x" - oznaczakonktretne numery wersji).<br>
+<br>
+1) Skopiuj plik /usr/src/linux/arch/i386/boot/bzImage do /boot/vmlinuz-2.x.x ("x" to numery wersji jądra).<br>
+<br>
+2) Utwórz lub zmień link symboliczny /boot/vmlinuz tak, aby wskazywał on<br>
+nowo skompilowane jądro np. poleceniem ln -s  /boot/vmlinuz-2.x.x /boot/vmlinuz<br>
+<br>
+3) Skopiuj plik /usr/src/linux/System.map do /boot/System.map-2.x.x<br>
+<br>
+4) Analogicznie jak w przypadku /boot/vmlinuz utwórz link symboliczny /boot/System.map np. poleceniem ln -s /boot/System.map-2.x.x /boot/System.map<br>
+<br>
+5) Otwórz dowolnym edytorem plik /etc/lilo.conf i znajdź w nim blok, zawierający wiersz "label=linux". Nad nim powinna się znajdować się linia "image=...." - zmień ją tak, by wskazywała plik /boot/vmlinuz.<br>
+<br>
+6) Na końcu pliku dopisz blok ładujący starą wersję jądra:<br>
+<br><font class=9ptv>
+    <font color="#478DE7">
+image=/boot/vmlinuz-2.x.x<br>
+  label=stare<br>
+  root=/dev/hda5</font><br>
+<br><font class=9pt>
+Wstawiamy oczywiście właściwą nazwę pliku zawierającego starą wersję jądra (w niektórych dystrybucjach znajduje się on w katalogu głównym, zmodyfikuj ścieżkę lub przenieś go do /boot - według uznania). Wpis root=dev/hd... jest oczywiście taki sam, jak w poprzednim bloku. Zakończ pracę z edytorm i w linii poleceń wpisz "lilo", aby aktywować nową konfigurację. Po ponownym uruchomieniu systemu, Linux powinien wystartować z nowym kernelem. Jeżeli wystąpi błąd, ponownie uruchom komputer, tym razem wpisując polecenie "stare" przy znaku zachęty LILO ("lilo:"). Sktukiem ubocznym będzie komunikat o niewłaściwej wersji kernela, bowiem plik System.map pochodzi z nowo skompilowanego jądra - ponieważ jednak jest to tylko stan przejściowy, możemy te komunikaty zignorować.<br>
+Czemu służą te wszystkie akrobacje z dowiązaniami symbolicznymi? Jeżeli w przyszłości skompilujemy nowszą wersję kernela, nie będzie już potrzeby zmiany pliku lilo.conf - wystarczy poprawić dowiązania symboliczne w katalogu /boot tak, aby wskazywały aktualna wersję pliku vmlinuz oraz System.map. Jeżeli chcesz, możesz zamiast tego wpisywać w lilo.conf właściwe ścieżki do plików. Zwróć też uwagę, że vmlinuz to zwyczajowa nazwa pliku kernela - może ona być ona dowolna (również... bzImage).<br>
+Jeżeli wolisz uruchamiać Linuxa przy użyciu dyskietki startowej, a nie LILO, w katalogu /usr/src/linux wydaj polecenie "make zdisk". Użytkownicy Loadlina muszą skopiować plik zawierający nowe jądro na partycję dosową i ewentualnie zmienić plik .bat uruchamiający
+Linuxa.<br>
+<br>
+
+                
+</font>
+
+                
+                </font></font>
+
+                
+    </font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font></font>
+
+                
+            </tr>
+            <tr>
+              <td width="100%" height="1" valign="top" colspan="2">
+              <p align="right"><font class="9pt">oprac. <b>Loopus</b> na
+              podstawie artykułu internetowego <a href="mailto:lupusfm@poczta.onet.pl" class="link"><br>
+              lupusfm@poczta.onet.pl</a><br>
+
+              </font>
+
+            </tr>
+            <tr>
+            <td width="100%" height="1" valign="middle" colspan="2" bgcolor="#000000"><b><font face="Verdana" color="#FFFFFF" size="1">&nbsp;Copyright
+              &copy; MagaZin 2001</font></b></td>
+            </tr>
+  </table>
+          <table border="0" width="92%" height="1" cellspacing="10" cellpadding="2">
+  <center>
+  </table>
+        </div>
+          </center>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

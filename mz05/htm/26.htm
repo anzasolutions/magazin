@@ -1,0 +1,192 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<link rel="stylesheet" href="magazin.css" TYPE="text/css">
+<title>MagaZin #5 :: listopad 2001</title>
+</head>
+
+<body link="478DE7" vlink="478DE7" alink="478DE7" topmargin="0" bottommargin="0" bgcolor="#000000">
+<div align="center">
+  <center>
+  <table border="0" width="700" cellspacing="0" cellpadding="0" height="1" bgcolor="#FFFFFF">
+    <tr>
+      <td width="697" height="154" valign="top"><img border="0" src="../img/up.png" width="700" height="150"></td>
+    </tr>
+  </center>
+    <tr>
+      <td width="697" height="1" valign="top">
+        <table border="0" width="700" cellspacing="0" cellpadding="0" height="1" bgcolor="#FFFFFF">
+          <tr>
+            <center>
+            <td width="697" height="1" valign="top"></center>
+            <div align="center">
+              <center>
+              <table border="0" width="92%" cellspacing="0" cellpadding="4">
+                <tr>
+                  <td width="10%" valign="middle"><a href="25.htm"><img border="0" src="../img/4.gif" align="right" width="50" height="25"></a></td>
+                  <td width="23%" valign="middle"><font face="Arial" size="1">poprzednia</font></td>
+                  <td width="33%" valign="middle">
+                    <p align="center"><a href="spis.htm"><img border="0" src="../img/6.gif" width="200" height="20"></a></td>
+                  <td width="23%" valign="middle">
+                    <p align="right"><font size="1" face="Arial">następna</font></td>
+                  <td width="10%" valign="middle"><a href="27.htm" class="link2"><img border="0" src="../img/3.gif" width="50" height="25"></a></td>
+                </tr>
+              </table>
+              </center>
+            </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    </tr>
+  <center>
+    <tr>
+      <td width="697" height="83" valign="top">
+        <div align="center">
+          <center>
+          <table border="0" width="92%" height="1" cellspacing="10" cellpadding="2">
+            <tr>
+              <td width="100%" height="5" valign="top" colspan="2"></td>
+            </tr>
+            <tr>
+              <td width="100%" height="16" valign="top" bgcolor="#000000" colspan="2"><img border="0" src="../img/13a.gif" width="225" height="14"></td>
+            </tr>
+            <tr>
+              <td width="100%" height="1" valign="top" colspan="2"><font face="Arial" size="2"><br>
+                </font>
+                <div align="center">
+                  <center>
+                  <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="64%" valign="top" height="30"><font class="u">Linux:
+                        Bash, czyli standardowy shell, cz. 2</font>
+                      </td>
+                    </center>
+          </center>
+  </center>
+                  <td width="36%" valign="top" height="30">
+                    <p align="right"></td>
+                </tr>
+              </table>
+            </div>
+  <center>
+          <center>
+          </center></center>
+    </td>
+            </tr>
+            <tr>
+              <td width="50%" height="112" valign="top">
+            <p align="justify"><font class="9pt"><b>Klocki w kąt</b><br>
+                <br>
+                W tym artykule zajmiemy się już PRAWDZIWYM PROGRAMOWANIEM. Bash oprócz funkcji interaktywnego shella jest również całkiem potężnym językiem programowania, w którym pisać możemy własne skrypty. Tak jak każdy szanujący się język programowania, bash udostępnia zmienne, pętle i instrukcje warunkowe.<br>
+                <br>
+                <b>Struktura skryptu</b><br>
+                <br>
+                Skrypt jest po prostu plikiem tekstowym, w którym zapisano kolejne instrukcje. Plikowi temu nadajemy prawo wykonywania (chmod +x nazwa_pliku) i voila! Mamy skrypt. Domyślnie wykona się on pod kontrolą shella zdefiniowanego jako domyślny (w pliku /etc/passwd) dla użytkownika. Dla bezpieczeństwa możemy zadeklarować, jaki program ma pełnić rolę interpretera naszego skryptu. W tym celu pierwsza linia musi mieć postać&nbsp;<br>
+                <br>
+                <font class=9ptv><font color="#478DE7">#!/ścieżka/do/programu</font><br>
+                <br><font class="9pt">
+                np.<br>
+                <br><font class=9ptv>
+                <font color="#478DE7">#!/bin/bash</font><br>
+                <br><font class=9pt>
+                Znak # we wszystkich językach skryptowych oznacza początek komentarza rozciągającego się aż do końca linii. Wszystkie inne linie interpretowane są jako polecenia.<br>
+                <br>
+                <b>Zmienne</b><br>
+                <br>
+                Zmienne są tożsame ze zmiennymi środowiskowymi. Przypisanie dowolnego ciągu znaków do zmiennej realizowane jest poprzez operator =, np.<br>
+                <br>
+                <font class=9ptv>
+                <font color="#478DE7">
+                [mac@localhost art3]$ pliki=`ls`<br>
+                [mac@localhost art3]$ echo $pliki linux.html<br>
+                [mac@localhost art3]$ _</font><br>
+                <br>
+                <font class=9pt>
+                Widzimy też sposób odwołania się do zmiennej (komenda echo wypisuje na stdout swoje parametry). $nazwa_zmiennej rozwijana jest przez bash do jej zawartości. Tak zdefiniowane zmienne nie są jednak przekazywane do programów (czy innych skryptów) wywoływanych z wnętrza bieżącego. Gdy chcemy aby były widoczne (np. ustawiamy zmienną $PATH), należy użyć słowa kluczowego export. Przykładowo export PATH=.:$PATH dodaje katalog bieżący na początku ścieżki przeszukiwania. Można też
+                &quot;wyeksportować'' już istniejącą zmienną poprzez wywołanie export nazwa_zmiennej. Np. w poprzednim przykładzie napisanie w linii komend polecenia export pliki spowoduje, że zmienna pliki będzie widoczna we wszystkich następnie uruchamianych programach, aż do wykonania polecenia unset pliki. Polecenie to usuwa zmienną ze środowiska.<br>
+                <br>
+                <b>Pętle</b><br>
+                <br>
+                Najczęściej wykorzystywaną pętlą programową basha jest pętla for. Umożliwia ona wykonanie kawałka kodu nadając pewnej zmiennej kolejne wartości z listy. Na przykład (uwaga, jest to tzw. jednolinijkowiec czyli skrypt, który można w całości zmieścić w linii komend:&nbsp;<br>
+                <br>
+                <font class=9ptv>
+                <font color="#478DE7">
+                
+                [mac@localhost art3]$ for i in 1 2 3; do echo Liczba $i; done<br>
+                Liczba 1<br>
+                Liczba 2<br>
+                Liczba 3<br>
+                [mac@localhost art3]$ _</font><br>
+                <br>
+                <font class=9pt>
+                Wywołanie, to jak widać for zmienna in lista; do komendy; done. Komendy rozdzielamy średnikami lub znakami nowej linii (jest to tożsame). Lista może składać się z elementów rozdzielonych spacjami, tabulatorami lub znakami nowej linii.&nbsp;
+                </font>
+                
+              <td width="50%" height="93" valign="top">
+                <p align="justify"><font class="9pt"> Oczywiście listy nie trzeba wypisywać ręcznie, może nią być wszystko, co w shellu rozwinie się do odpowiedniej formy. Prawidłowe są zatem konstrukcje: for plik in *.mp3; do mpg123 $plik; done , for wyr in `cat plik.txt` do echo $wyr; done | sort wypisująca wszystkie wyrazy z pliku tekstowego w kolejności alfabetycznej itd.&nbsp;<br>
+                Pętle until i while mają bardzo podobną składnię. Wywołuje się je następująco: until test; do komendy; done oraz while test; do komendy; done. Test jest normalną komendą, która jak wiemy, może zakończyć się sukcesem lub porażką (bardziej dokładnie - zwrócić zero lub inną wartość jako stan wyjścia). until wykonuje się aż test zwróci zero (sukces), while - aż test zakończy się porażką. Testem może być dowolny program, gdyż każdy zwraca przy zakończeniu jakąś wartość. Najbardziej użyteczny jest jednak program test lub jego wbudowana w basha forma - o tym za chwilę.<br>
+                <br>
+                <b>Instrukcja warunkowa</b><br>
+                <br>
+                if test1; then komendy1; elif test2; then komendy2; elif test3; then komendy3; ... else komendyN; fi. Wykona komendy1 w razie sukcesu polecenia test1, komendy2 w razie sukcesu test2 itd. KomendyN wykonają się o ile żaden z testów nie zakończył się sukcesem. Bloki elif oraz else są opcjonalne. Prościutkie przykłady podam w następnym podrozdziale.<br>
+                <br>
+                <b>
+                Wbudowane testy</b><br>
+                <br>
+                Bash umożliwia przeprowadzanie prostych testów w instrukcjach if, while i until bez potrzeby wywoływania zewnętrznych programów. Jest to w zasadzie wbudowana wersja polecenia test (man test). Wywołuje się ją po prostu w nawiasach kwadratowych, np. [ -z $zmienna ] sprawdza, czy zmienna rozwija się w pusty ciąg (czyli nie jest zdefiniowana); [ -f /jakis/plik ] sprawdza istnienie pliku itd. Zwróć uwagę na spacje oddzielające nawiasy od zawartości. Pełną listę obsługiwanych parametrów znajdziesz w manualu do polecenia test. Stamtąd dowiesz się też jak łączyć warunki operatorami ,,oraz'' i
+                ,,&quot;ub''. Mały przykładzik:&nbsp;<br>
+                - if [ -n $DISPLAY ]; then gvim; else vi; fi uruchamia okienkową lub konsolową wersję edytora vi w zależności od tego, czy jesteśmy w sesji X Window czy na konsoli tekstowej (sprawdza ustawienie zmiennej DISPLAY).&nbsp;<br>
+                - if [ -f /var/log/messages -o -d /etc ]; then echo jest; fi Wypisuje
+                ,&quot;jest'' o ile w systemie znajduje się plik /var/log/messages lub katalog /etc.<br>
+                <br>
+                <b>
+                Minikalkulator</b><br>
+                <br>
+                Bash może też dokonywać samodzielnie prostych rachunków. Napis $[ działanie ] rozwija się w jego wynik. Przykładowo: echo $[ 2*2 ] wypisze 4. Oczywiście operandami mogą być zmienne lub wszystko, co rozwinie się w liczbę całkowitą (albo w działanie). Bash rozpoznaje m.in. operatory:<br>
+                <br>
+                - + - dodawania<br>
+                - - - odejmowania<br>
+                - * - mnożenia<br>
+                - / - dzielenia<br>
+                - % - reszty z dzielenia<br>
+                - ** - potęgowania<br>
+                <br>
+                Oraz operatory logiczne i bitowe. Pełna lista w manualu pinfo bash (Bash Features->Shell Arithmetic).<br>
+                <br>
+                <b>
+                Koniec?</b><br>
+                <br>
+                Z pewnością nie. Przedstawione w niniejszym artykule zagadnienia to dopiero wierzchołek góry lodowej. Bash to program o ogromnym stopniu komplikacji i niesamowitych możliwościach. Bardziej dociekliwych zachęcam do samodzielnych eksperymentów wspomaganych hipertekstowym manualem (p)info bash lub stroną manuala man bash.<br>
+                <br>
+                </font>
+                
+            </tr>
+            <tr>
+              <td width="100%" height="1" valign="top" colspan="2">
+              <p align="right"><font class="9pt">Oprac. <b>Loopus</b> na
+              podstawie artykułu znalezionego w Sieci<a href="mailto:lupusfm@poczta.onet.pl&nbsp;" class="link"><br>
+              lupusfm@poczta.onet.pl</a><br>
+
+              </font>
+
+            </tr>
+            <tr>
+            <td width="100%" height="1" valign="middle" colspan="2" bgcolor="#000000"><b><font face="Verdana" color="#FFFFFF" size="1">&nbsp;Copyright
+              &copy; MagaZin 2001</font></b></td>
+            </tr>
+  </table>
+          <table border="0" width="92%" height="1" cellspacing="10" cellpadding="2">
+  <center>
+  </table>
+        </div>
+          </center>
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

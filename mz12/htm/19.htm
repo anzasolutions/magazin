@@ -1,0 +1,327 @@
+<html><head><meta http-equiv=Content-Type content="text/html; charset=iso-8859-2"><link rel=stylesheet href=magazin.css TYPE=text/css><title>MagaZin
+#12 :: sierpień 2002</title></head><body link=#478DE7 vlink=#478DE7 alink=#478DE7 topmargin=0 bottommargin=0 bgcolor=#000000><div align=center><center><table border=0 width=650 style="border-style: solid; border-width: 0" cellspacing=0 cellpadding=0 height=100% bgcolor=#FFFFFF><tr><td width=100% height=20 valign=top>
+        <p align="justify">&nbsp;</td></tr></center><tr><td width=100% height=25 valign=middle bgcolor=#4048A8><div align=center><table border=0 width=583 cellspacing=0 cellpadding=0><center><td width=400 class=9ptV valign=bottom colspan=3><p class=9ptV><font color=#FFFFFF><b>MAGAZIN
+            #12 :: STRONA 19</b></font></td></center><td width=133 class=9ptV valign=bottom><p align=right><font color=#FFFFFF><img border=0 src=../img/direct.gif width=7 height=10><img border=0 src=../img/direct3.gif width=7 height=10><img border=0 src=../img/direct2.gif width=7 height=10></font></td><center><td width=8 class=9ptV valign=bottom></td><td width=55 class=9ptV><b><font color=#FFFFFF>KOMPUTER</font></b></td></table></center></div></td></tr><center><tr><td width=100% height=5 valign=top><p class=9ptV>&nbsp;</td></tr><tr><td width=100% height=20 valign=bottom></center><div align=center><table border=0 width=586 height=20 cellspacing=0 cellpadding=0><tr><td width=135 background=../img/line3.gif><p align=right><img border=0 src=../img/line.gif width=9 height=20></td><center><td width=310 valign=bottom><p align=center class=9ptV><a href="18.htm" class="link2"><font color=#4048A8>poprzednia strona</a> ::
+              </font><a href=spis.htm class=link2><font color=#4048A8>spis treści</font></a><font color=#4048A8> ::<a href="20.htm" class="link2">
+              </a> </font><a href="20.htm" class="link2"><font color=#4048A8>następna strona</font></a></td><td width=135 background=../img/line3.gif><img border=0 src=../img/line2.gif width=9 height=20></td></tr></table></center></div></td></tr><center><tr><td width=100% height=5 valign=top><p class=9ptV>&nbsp;</td></tr><tr><td width=100% height=21 valign=top><div align=center><center><table border=0 width=600 cellspacing=0 cellpadding=6 height=20 bgcolor=#FFFFFF><tr><td width=288 height=20 valign=top class=9pt><div align=center><center><table border=0 width=100% cellspacing=0 cellpadding=0><tr><td width=100% valign=top class=9ptV height=15>
+                      <p align="justify"><i>Software</i></p>
+                    </td></tr><tr><td width=100%><p class=u align="justify">Kurs Delphi
+                      #3</td></tr></table></center></div>
+              <p class="9ptV" align="justify">Witam, witam w moich nowych programach... :) Jak obiecałem w poprzedniej części kursu dzisiaj zajmiemy się... Delphi! :) Tym razem jednak na poważnie, czyli napiszemy program w środowisku Windows. Co prawda nie pokaże od razu całej mocy Delphi, bo od tego będzie cały ten kurs. Jednak powoli, powoli, a do wszystkiego dojdziecie.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+              Niestety muszę na początku was trochę przynudzić wstępem. Włączcie Delphi i czytajcie. Na samej górze mamy okno główne Delphi, w którym możemy wykonywać operacje na projekcie (nowy, otwórz, zapisz itp) oraz możemy wstawiać obiekty z kilku palet (w zależności od wersji ilość bywa różna). Po lewej stronie mamy
+              <font color="#4048A8"> Object Inspector</font>, czyli inspektora obiektów, który odpowiada za ustawianie właściwości naszych obiektów. Po środku ekranu mamy dwa okna
+              <font color="#4048A8"> Form1</font> (okno główne naszej aplikacji, tutaj będziemy decydowali o wyglądzie naszej aplikacji) oraz Unit1.pas, czyli okno, w którym będziemy mogli edytować wszystkie moduły w naszej aplikacji (w tym przypadku Unit1.pas). Proszę zauważyć, że z
+              <font color="#4048A8"> Project -> View Source </font> nie będziemy praktycznie korzystać (a i tak można napisać bardzo dużą aplikację).<br>
+              <font color="#4048A8">Formularz</font> czyli <font color="#4048A8">Form1</font>, służy nam za okienko, jak zresztą widzicie, całkiem standardowe. Tutaj oprócz możliwości wstawiania innych obiektów możemy te okienko troszeczkę zmienić, np.: jego rozmiar. Możemy to zrobić ręcznie (kliknąć i przesunąć krawędź okna) lub posługując się jego właściwościami w
+              <font color="#4048A8"> Object Inspectorze</font> (<font color="#4048A8">width</font> i
+              <font color="#4048A8">height</font>).<br>
+              <font color="#4048A8">Form1</font> jest obiektem klasy <font color="#4048A8">TForm</font>, czyli posiada jego wszystkie właściwości, które zostały ustalone przez projektantów Delphi. Klasy odróżniają się od obiektów literą T na początku. Czyli np.:
+              <font color="#4048A8"> Button1</font> (obiekt) jest obiektem klasy
+              <font color="#4048A8">TButton</font>, ale również jeśli tak ustalimy (właściwość
+              <font color="#4048A8"> Name</font> przycisku) to również <font color="#4048A8"> Marek</font> może być z klasy
+              <font color="#4048A8">TButton</font>. Kapujecie? W kodzie wygląda to tak:<br>
+              <font color="#4048A8">Button1: TButton;<br>
+              Marek: TButton;<br>
+              Cos: TSpeedButton;</font><br>
+              Klas jest więcej, a my możemy w naszym projekcie tworzyć ich więcej i ustalać ich właściwości jak chcemy.<br>
+              Każdy obiekt ma swoje właściwości, o których wspominałem już wyżej. Każda klasa ma inne właściwości, ale wiele z parametrów obiektów może występować w innych obiektach. Aby ustalić
+              <font color="#4048A8"> Caption</font> (tekst na obiekcie) obiektu <font color="#4048A8"> Przycisk
+              </font>(TButton) należy napisać tak:<br>
+              <font color="#4048A8">Przycisk.Caption := 'OK';</font><br>
+              Jak zauważyliście właściwość obiektu od jego nazwy oddzielamy kropką. Poza tym właściwość
+              <font color="#4048A8"> Caption</font> jest typu <font color="#4048A8"> String</font> i dlatego podałem ją w apostrofach. Natomiast
+              <font color="#4048A8"> Width </font> jest typem <font color="#4048A8"> Integer</font> i ustalamy go tak:<br>
+              <font color="#4048A8">Przycisk.Width := 100;</font><br>
+              Nic nie stoi na przeszkodzie aby wykonywać różne funkcje na właściwościach obiektów. Możemy je pomnożyć:<br>
+              <font color="#4048A8">Button1.Caption := 'Pole zajmowane przez obiekt Button1: ' + IntToStr(Button1.Width * Button1.Height);</font><br>
+              Dzięki temu, gdy przycisk będzie miał rozmiary 100x32 wtedy otrzymamy takiego stringa:<br>
+              Pole zajmowane przez obiekt <font color="#4048A8"> Button1: 3200</font><br>
+              Oczywiście oprócz stringów są także inne typy zmiennych w właściwościach:
+              <font color="#4048A8"> Enabled</font> (aktywność obiektu) jest typu
+              <font color="#4048A8"> Boolean:</font><br>
+              <font color="#4048A8">Button1.Enabled := True;</font><br>
+              <br>
+              Do obiektów zaraz wrócimy, a teraz zobaczmy jak wygląda domyślny kod
+              <font color="#4048A8">Unit1</font>:<br>
+              <font color="#4048A8">unit Unit1;<br>
+              <br>
+              interface<br>
+              <br>
+              uses<br>
+              Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs;<br>
+              <br>
+              type<br>
+              TForm1 = class(TForm)<br>
+              private<br>
+              { Private declarations }<br>
+              public<br>
+              { Public declarations }<br>
+              end;<br>
+              <br>
+              var<br>
+              Form1: TForm1;<br>
+              <br>
+              implementation<br>
+              <br>
+              {$R *.DFM}<br>
+              <br>
+              end.<br>
+              </font><br>
+              <font color="#4048A8">unit Unit1; </font> - tak nazywa się nasz moduł okna głównego. Aby go zmienić należy zapisać projekt na dysk.<br>
+              <font color="#4048A8">uses {...}</font> - tutaj duża lista modułów, z których korzysta nasz program.<br>
+              <font color="#4048A8">type TForm1 = class(TForm) </font> - tutaj podali nam nazwę klasy naszego okna głównego. Po tym słowie zwykle są podawane obiekty jakie wstawiliśmy do naszego okna oraz ich klasy.<br>
+              <font color="#4048A8">private i public </font> - po tych słowach podajemy deklaracje prywatne (private), niewidoczne dla innych modułów oraz public czyli widoczne dla innych modułów.<br>
+              <font color="#4048A8">var Form1: TForm; </font> - tutaj mamy podaną nazwę naszego okna oraz zdefiniowanie z jakiej klasy ono pochodzi (TFrom).<br>
+              <font color="#4048A8">implementation </font> - po tym słowie kończymy sekcję interface i zaczynamy implementation. Tutaj możemy definiować zmienne używane tylko przez ten moduł. Będą tu też procedury.<br>
+              <font color="#4048A8">{$R *.DFM}</font> - tutaj moduł podaje nazwę pliku RES naszego projektu (o zasobach kiedy indziej).<br>
+              end. - to słowo kończy całkowicie moduł, po nim nic nie możemy wpisywać, bo program i tak to zignoruje.<br>
+              <br>
+              Myślę, że wstępu dość, czas na praktykę. Włączcie Delphi, nowy projekt i wstawcie do niego obiekt typu TButton (karta Standard). Teraz zmieńcie jego nazwę na Przycisk i dwukrotnie na niego kliknijcie. Teraz powinno się wam pokazać źródło naszego programu, ale takie jakby inne?<br>
+              <br>
+              <font color="#4048A8">unit Unit1;<br>
+              <br>
+              interface<br>
+              <br>
+              uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs;<br>
+              <br>
+              type<br>
+              TForm1 = class(TForm)<br>
+              Przycisk: TButton;<br>
+              procedure PrzyciskClick(Sender: TObject);<br>
+              private<br>
+              { Private declarations }<br>
+              public<br>
+              { Public declarations }<br>
+              end;<br>
+              <br>
+              var<br>
+              Form1: TForm1;<br>
+              <br>
+              implementation<br>
+              <br>
+              {$R *.DFM}<br>
+              <br>
+              procedure TForm1.PrzyciskClick(Sender: TObject);<br>
+              begin<br>
+              <br>
+              end;<br>
+              <br>
+              end.<br>
+              </font><br>
+              Objaśnienia po deklaracji <font color="#4048A8"> TForm1 =
+              class(TForm):</font><br>
+              <font color="#4048A8">Przycisk: TButton; </font> - tutaj doszła nam nowa deklaracja: Przycisk: TButton; czyli program utworzy nam obiekt typu TButton o nazwie Przycisk.<br>
+              <font color="#4048A8">procedure PrzyciskClick(Sender: TObject);</font> - tutaj dzięki naszemu dwukrotnemu kliknięciu na obiekt Przycisk utworzyliśmy zdarzenie, które będzie wykonywane po naciśnięciu na niego. Ta deklaracja mówi tylko programowi, że taką procedurę powinien znaleźć w dalszej części kodu.<br>
+              Po słowie <font color="#4048A8">implementation</font>:<br>
+              <font color="#4048A8">procedure TForm1.PrzyciskClick(Sender: TObject);<br>
+              begin<br>
+              <br>
+              end;</font><br>
+              - tutaj utworzyliśmy procedurę, o której wspominaliśmy w poprzedniej części kodu. Procedura ta ma nazwę: PrzyciskClick. Przed tą nazwą jest wyraz TForm1, który mówi, że ta procedura należy do obiektu TForm1 (nasze okno). Mogliśmy sobie utworzyć własną procedurę bez deklaracji w obiekcie TForm, ale wtedy mielibyśmy mniejszy z niej użytek. W nawiasie jest taka deklaracja: Sender: TObject, która służy głównie do rozpoznania jaki obiekt ją wywołał (w tym przypadku Przycisk, ale są przypadki w których kilka obiektów korzysta z jednej procedury i czasami potrzebujemy sprawdzenia kto ją wywołał). Teraz trochę o samej procedurze. Możemy wstawić do niej jej własne zmienne i stałe, z których nie będą mogły korzystać inne procedury. Aby stworzyć zmienną lub stałe, które będą widziały wszystkie procedury (zadeklarowane do obiektu TForm1) trzeba je zadeklarować po słowie implementation:<br>
+              <font color="#4048A8"><br>
+              implementation<br>
+              var tekst: String;</font><br>
+              <br>
+              Zerknijcie jeszcze do <font color="#4048A8"> Object Inspectora </font> edytujcie obiekt Przycisk i zobaczcie jego kartę
+              <font color="#4048A8"> Events...</font> trochę tego dużo, prawda? Są to wszystkie zdarzenia jakie może obsługiwać dany obiekt. Jak widzicie zdarzenie
+              <font color="#4048A8"> OnClick</font> jest już ustawione... to właśnie nasz efekt dwukrotnego kliknięcia na Przycisk. Teraz klikając dwukrotnie na któreś zdarzenie Delphi automatycznie utworzy do niego procedurę i przeniesie nasz do edycji kodu. kliknijcie teraz dwa razy na
+              <font color="#4048A8">OnClick</font>... przeniesie nas to do kodu i...</td><td width=282 height=20 valign=top class=9pt></center></center>
+          <p class="9ptV" align="justify"><b>Tworzymy zdarzenie</b><br>
+          <br>
+          Skoro większość podstaw mamy za sobą czas na jakiś przykład. Do naszego aktualnie tworzonego projektu dodaj jeden obiekt
+          <font color="#4048A8"> TEdit </font> (karta <font color="#4048A8">Standard</font>). Wróć z powrotem do kodu do procedury
+          <font color="#4048A8"> OnClick</font> Przycisku i napisz tak:<br>
+          <font color="#4048A8"><br>
+          procedure TForm1.PrzyciskClick(Sender: TObject);<br>
+          begin<br>
+          ShowMessage(Edit1.Text);<br>
+          end;<br>
+          </font><br>
+          Włączcie program... jak widzicie tworzy on nam nowe komunikatowe okienko i wypisuje tekst, który napiszemy w komponencie
+          <font color="#4048A8"> TEdit</font> (jednowierszowe pole edycji tekstu). Czas na wyjaśnienia:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <font color="#4048A8">ShowMessage(const Msg: String);</font> - procedura ta tworzy okno komunikatowe z przyciskiem OK i wypisuje tekst zawarty w nawiasach. Mogliśmy również napisać: ShowMessage('Hello world!'); co spowoduje wypisanie nam tekstu Hello world! ;)<br>
+          <font color="#4048A8">Edit1.Text </font> - tutaj skorzystałem z właściwości obiektu typu TEdit Text, który ma pod swoją wartością podstawiony tekst zawarty w Edit1 (w polu edycji). Tekst ten możemy odczytać (jak wyżej) oraz podstawić pod niego coś...<br>
+          <br>
+          Skoro wszystko jasne wybierzcie w <font color="#4048A8"> Object Inspectorze
+          </font> obiekt <font color="#4048A8"> Form1</font> i edytujcie jego zdarzenie (karta
+          <font color="#4048A8">Events</font>) <font color="#4048A8">OnCreate</font>. Tam wpiszcie:<br>
+          <font color="#4048A8"><br>
+          procedure TForm1.FormCreate(Sender: TObject);<br>
+          begin<br>
+          Edit1.Text := 'Tutaj wpisz tekst';<br>
+          end;</font><br>
+          <br>
+          Zdarzenie <font color="#4048A8"> OnCreate</font> występuje wtedy, gdy jest tworzony nasz formularz czyli na początku programu. Dzięki temu w polu edycji będziemy mieli taki tekst po uruchomieniu programu: Tutaj wpisz tekst. Czyli mówiąc fachowo: właściwość obiektu<font color="#4048A8"> Edit1 Text</font> ma wartość Tutaj wpisz tekst. Zróbcie jeszcze jeden eksperyment: wpiszcie coś w
+          <font color="#4048A8"> Object Inspectorze</font> obiektu <font color="#4048A8"> Edit1</font> w właściwość
+          <font color="#4048A8">Text</font>. Zmienił się tekst w polu edycji, ale teraz uruchomcie program... i co? Pole edycji ma taki tekst: Tutaj wpisz tekst, chociaż zmieniliśmy go w
+          <font color="#4048A8"> Object Inspectorze.</font> Wyjaśnienie znajdziecie w
+          <font color="#4048A8"> OnCreate Form1</font>, bo tutaj wpisaliśmy tą wartość. Do czego zmierzam? Właśnie wam pokazałem, że ustalać wartości obiektu można w dwa sposoby: w
+          <font color="#4048A8"> Object Inspectorze </font> i w <font color="#4048A8">kodzie</font>. To co będziemy mieli w efekcie końcowym zależy od tego w jakiej kolejności są ułożone procedury. Najpierw program generuje wartości dla naszych obiektów podczas tworzenia okna (tego nie widzimy), a później w innych procedurach. W tym przypadku w procedurze po utworzeniu okna zostaje podstawiona nowa wartość dla
+          <font color="#4048A8">Edit1.Text</font>. Ufff...<br>
+          <br>
+          <b>Idziemy dalej</b><br>
+          <br>
+          Przyznam, że długo myślałem nad następnym waszym krokiem w Delphi i postanowiłem, że jednak często bywają problemy przesyłania danych między dwoma oknami. Więc, do naszego projektu dodamy nowe okno
+          <font color="#4048A8"> File -> New Form </font> lub dostępna ikona na pasku. Klikajcie! Dzięki temu utworzył się nam nowy obiekt
+          <font color="#4048A8"> Form2 </font> oraz nowy moduł <font color="#4048A8">Unit2</font>. Teraz spójrzcie na źródło
+          <font color="#4048A8"> Unit1 </font> i dopiszcie to co ja napisałem.<br>
+          </p>
+          <p class="9ptV" align="justify">
+          <br>
+          <font color="#4048A8">unit Unit1;<br>
+          <br>
+          interface<br>
+          <br>
+          uses Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls;<br>
+          <br>
+          type<br>
+          TForm1 = class(TForm)<br>
+          Przycisk: TButton;<br>
+          Edit1: TEdit;<br>
+          procedure FormCreate(Sender: TObject);<br>
+          procedure PrzyciskClick(Sender: TObject);<br>
+          private<br>
+          { Private declarations }<br>
+          public<br>
+          { Public declarations }<br>
+          end;<br>
+          <br>
+          var<br>
+          Form1: TForm1;<br>
+          <br>
+          implementation<br>
+          uses Unit2;<br>
+          {$R *.DFM}<br>
+          <br>
+          procedure TForm1.FormCreate(Sender: TObject);<br>
+          begin<br>
+          Edit1.Text := 'Tutaj wpisz tekst';<br>
+          end;<br>
+          <br>
+          procedure TForm1.PrzyciskClick(Sender: TObject);<br>
+          begin<br>
+          Form2.Label1.Caption := Edit1.Text;<br>
+          ShowMessage('Przesłano tekst');<br>
+          end;<br>
+          <br>
+          end.</font><br>
+          <br>
+          Jak widzicie do sekcji<font color="#4048A8"> implementation </font> dodałem coś takiego:
+          <font color="#4048A8"> uses Unit2</font>. Dzięki temu możemy porozumiewać się tym oknem z
+          <font color="#4048A8"> Form2 </font> i możemy korzystać z jego procedur, funkcji i obiektów. Jak zauważyliście zmieniło się zdarzenie
+          <font color="#4048A8"> OnClick</font> przycisku:<br>
+          <font color="#4048A8">Form2.Label1.Caption := Edit1.Text;<br>
+          ShowMessage('Przesłano tekst');</font><br>
+          Pierwsza linijka odwołuje się do <font color="#4048A8"> Form2 </font> do obiektu o nazwie
+          <font color="#4048A8"> Label1</font> do jego właściwości <font color="#4048A8"> Caption</font> i zmienia ją na wartość
+          <font color="#4048A8">Edit1</font>. Jeśli jesteś rozumny to na pewno zauważyłeś, ze takiego obiektu w
+          <font color="#4048A8"> Form2 </font> nie ma, więc go wstaw (<font color="#4048A8">TLabel</font>). Aby wszystko grało do końca to ustawcie właściwość
+          <font color="#4048A8"> Visible Form2</font> na <font color="#4048A8">True</font>, dzięki czemu będziemy widzieć obydwa okna aplikacji. Działa?<br>
+          <br>
+          Tym razem nie będę się tłumaczył wielkością pliku i zakończę tą lekcję. Czemu? To co chciałbym napisać wymaga trochę więcej miejsca i szkoda zaczynać to tu i teraz bez skończenia. Żebyście natomiast nie gadali, że za mało, to na koniec daję jeszcze najczęściej spotykane właściwości obiektów i ich wyjaśnienie.
+          Sayonara!<br>
+          </p>
+          <div align="justify">
+            <table borderColor="#c0c0c0" cellSpacing="0" cellPadding="4" width="100%" border="1">
+              <tbody>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify"><b>Właściwość</b></p>
+                  </td>
+                  <td width="50%" class="9ptV">
+                    <p align="justify"><b> Objaśnienie&nbsp;</b></p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Caption&nbsp;</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Nagłówek obiektu, czyli tekst, który będzie wyświetlany i widoczny dla użytkownika.&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Cursor&nbsp;</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Wygląd kursora, gdy najedzie na dany obiekt.&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Enabled&nbsp;</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Aktywność obiektu</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> True&nbsp;</p>
+                  </td>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">aktywny</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> False</p>
+                  </td>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">zaciemniony</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Height&nbsp;</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Wysokość obiektu&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Left</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Pozycja obiektu od lewej krawędzi w pixelach&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Name&nbsp;</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Nazwa obiektu&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Top</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Pozycja obiektu od górnej krawędzi w pixelach&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Visible</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Widoczność obiektu&nbsp;</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="50%" class="9ptV">
+                    <p align="justify">Width&nbsp;</p>
+                  </td>
+                  <td width="50%" class="9ptV"> 
+                    <p align="justify"> Długość obiektu&nbsp;</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="9ptV">&nbsp;</p>
+          <p class=9ptV align=right><font color=#000000><b>PC3T</b><br> </font><a href=mailto:przempc@poczta.onet.pl class=link2><font color=#4048A8>przempc@poczta.onet.pl</font></a></td></tr></table></div></td></tr><tr><center><td width=100% height=20 valign=bottom></center><div align=center><table border=0 width=586 height=20 cellspacing=0 cellpadding=0><tr><td width=135 background=../img/line3.gif><p align=right><img border=0 src=../img/line.gif width=9 height=20></td><center><td width=310 valign=bottom><p align=center class=9ptV><a href="18.htm" class="link2"><font color=#4048A8>poprzednia strona</font></a><font color=#4048A8> :: </font><a href=spis.htm class=link2><font color=#4048A8>spis treści</font></a><font color=#4048A8> :: </font><a href="20.htm" class="link2"><font color=#4048A8>następna strona</font></a></td><td width=135 background=../img/line3.gif><img border=0 src=../img/line2.gif width=9 height=20></td></tr></table></center></div></td></tr><tr><td width=100% height=20 valign=top>&nbsp;</td></tr><tr><td width=100% height=25 valign=middle bgcolor=#4048A8><div align=center><table border=0 width=583 cellspacing=0 cellpadding=0><center><td width=596 class=9ptV valign=bottom colspan=6><p class=9ptV align=center><font color=#FFFFFF><b>WSZELKIE PRAWA ZASTRZEŻONE :: COPYRIGHT &copy; LOOPUSNET/MAGAZIN 2001-2002</b></font></td></center><center></table></center></div></td></tr><tr><td width=100% height=20 valign=top>&nbsp;</td></tr></table></div></body></html>
